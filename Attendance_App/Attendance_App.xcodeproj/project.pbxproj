@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF0E3BFA262B29910011450A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E3BF9262B29910011450A /* LoginViewController.swift */; };
 		FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4815262AF3C500394EFE /* AppDelegate.swift */; };
 		FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4817262AF3C500394EFE /* ViewController.swift */; };
 		FF6D481B262AF3C500394EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6D4819262AF3C500394EFE /* Main.storyboard */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF0E3BF9262B29910011450A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FF6D4812262AF3C500394EFE /* Attendance_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6D4815262AF3C500394EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF6D4817262AF3C500394EFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				FF6D4817262AF3C500394EFE /* ViewController.swift */,
-				FF0E3BF9262B29910011450A /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -165,7 +162,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF0E3BFA262B29910011450A /* LoginViewController.swift in Sources */,
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
 				FF6D4829262AF8A800394EFE /* ColorHome.swift in Sources */,
 				FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */,
