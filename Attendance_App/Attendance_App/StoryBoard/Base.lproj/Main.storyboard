@@ -67,7 +67,7 @@
                                         </constraints>
                                         <state key="normal" title="Login "/>
                                         <connections>
-                                            <segue destination="hcS-HT-11y" kind="show" id="3Vo-BR-f87"/>
+                                            <action selector="LoginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5R4-bL-tSf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -76,15 +76,26 @@
                                     <constraint firstItem="86A-FB-N7d" firstAttribute="height" secondItem="Io2-eK-zwA" secondAttribute="height" id="Y1J-qF-8OP"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jr-9q-LdE">
+                                <rect key="frame" x="166.66666666666666" y="586" width="41.666666666666657" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Bga-nt-OZh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="p1Y-Ak-UGD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Dc-LL-bGK"/>
                             <constraint firstItem="p1Y-Ak-UGD" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="998" constant="100" id="7Jy-cL-MZL"/>
                             <constraint firstItem="cJ0-qT-8V9" firstAttribute="top" secondItem="p1Y-Ak-UGD" secondAttribute="bottom" id="D2W-RT-31u"/>
+                            <constraint firstItem="2Jr-9q-LdE" firstAttribute="top" secondItem="dvu-dN-Qt1" secondAttribute="bottom" constant="10" id="GXk-4i-CQH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dvu-dN-Qt1" secondAttribute="trailing" constant="40" id="REe-7E-ahL"/>
                             <constraint firstItem="dvu-dN-Qt1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WX9-8W-rUW"/>
                             <constraint firstItem="cJ0-qT-8V9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wd1-l6-0Gb"/>
+                            <constraint firstItem="2Jr-9q-LdE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZtF-Lj-3W6"/>
                             <constraint firstItem="m4P-QX-ngg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aRW-1b-y8u"/>
                             <constraint firstItem="m4P-QX-ngg" firstAttribute="top" secondItem="cJ0-qT-8V9" secondAttribute="bottom" id="lA6-Qs-LzH"/>
                             <constraint firstItem="dvu-dN-Qt1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" priority="997" id="mRX-zy-YCI"/>
@@ -100,27 +111,13 @@
                         <outlet property="PasswordTextField" destination="I7Y-Ot-Fcs" id="S4f-UX-X8q"/>
                         <outlet property="StackLogin" destination="dvu-dN-Qt1" id="NCd-vy-ZkB"/>
                         <outlet property="UsernameTextField" destination="Io2-eK-zwA" id="GLE-MJ-A4r"/>
+                        <outlet property="ValidationMessage" destination="2Jr-9q-LdE" id="ykm-Id-sac"/>
                         <outlet property="imageHome" destination="p1Y-Ak-UGD" id="Qtt-9c-K44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071.0144927536232" y="132.58928571428572"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="BEm-Xw-Cxz">
-            <objects>
-                <viewController id="hcS-HT-11y" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qty-9o-BRg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="MbE-Zr-Bst"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wj8-B7-GZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1824.6376811594205" y="132.58928571428572"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="132.26600985221674"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8d4-u8-nbK">

@@ -20,6 +20,28 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var StackLogin: UIStackView!
     
+    @IBOutlet weak var ValidationMessage: UILabel!
+    
+    // Action login
+    
+    @IBAction func LoginUser(_ sender: Any) {
+
+        guard let _ = UsernameTextField.text, UsernameTextField.text?.count != 0 else
+        {
+            ValidationMessage.textColor = UIColor.red
+            ValidationMessage.isHidden = false
+            ValidationMessage.text = "Please enter valid username"
+            return
+        }
+        
+        guard let _ = PasswordTextField.text, PasswordTextField.text?.count != 0 else
+        {
+            ValidationMessage.textColor = UIColor.red
+            ValidationMessage.isHidden = false
+            ValidationMessage.text = "Please enter your password"
+            return
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +49,12 @@ class ViewController: UIViewController {
         imageHome.image = UIImage(named: "book")
         setUpComponets()
         Curved()
+        // Hile label
+        ValidationMessage.isHidden = true
+
+        // Hide password
+        PasswordTextField.isSecureTextEntry = true
+
         // Chạy đồng bộ làm cho ứng dụng mượt hơn. Thực hiện delay trước khi chạy một khoảng thời gian truyền vào
         super.viewDidLayoutSubviews()
         
