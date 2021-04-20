@@ -42,20 +42,20 @@ class ViewController: UIViewController {
             return
         }
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         imageHome.image = UIImage(named: "book")
         setUpComponets()
+        // Hiện thị curve
         Curved()
-        // Hile label
+        // Ẩn label
         ValidationMessage.isHidden = true
-
-        // Hide password
+        // Ẩn password
         PasswordTextField.isSecureTextEntry = true
 
-        // Chạy đồng bộ làm cho ứng dụng mượt hơn. Thực hiện delay trước khi chạy một khoảng thời gian truyền vào
         super.viewDidLayoutSubviews()
         
         // Hàm animation
@@ -86,21 +86,20 @@ class ViewController: UIViewController {
         let universalSize = self.view.bounds
         let baseLine = self.view.bounds.height/1.2
         let path = UIBezierPath();
+        // AddLine chạy từ point x,y
         path.move(to: CGPoint(x: 0, y: baseLine))
+        // tỷ lệ chạy của curved (tỷ lệ float)
         path.addCurve(to: CGPoint(x: 1 * universalSize.width, y: baseLine ), controlPoint1: CGPoint(x: universalSize.width * (0.3) , y: amplitude + baseLine), controlPoint2: CGPoint(x: universalSize.width * (0.7), y:-amplitude + baseLine))
-        
-        
+        // Line chạy từ
         path.addLine(to: CGPoint(x: universalSize.width, y: universalSize.height))
         path.addLine(to: CGPoint(x: 0, y: universalSize.height))
-        
-        
+
+        // Thêm thuộc tính cho khối cuverd đã tạo
         let layer = CAShapeLayer()
         layer.fillColor = UIColor.init(red: 0.07, green: 0.93, blue: 0.75, alpha: 1.00).cgColor
         layer.opacity = 0.4
         layer.path = path.cgPath
         self.view.layer.addSublayer(layer)
-        
-        // animation
     }
 
 }

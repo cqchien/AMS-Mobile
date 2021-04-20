@@ -19,7 +19,7 @@ class styleLogin {
         // Tạo dòng dưới
         let bottomLine = CALayer()
         
-        bottomLine.frame = CGRect(x: 0, y: textField.frame.size.height - 10, width: textField.frame.size.width, height: 1)
+        bottomLine.frame = CGRect(x: 0, y: textField.frame.size.height - 10, width: textField.frame.size.width + 2*textField.bounds.size.width , height: 1)
         
         bottomLine.backgroundColor = UIColor.init(red: 0.39, green: 1.00, blue: 0.90, alpha: 1.00).cgColor
         

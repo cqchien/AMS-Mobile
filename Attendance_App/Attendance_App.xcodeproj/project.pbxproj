@@ -12,7 +12,8 @@
 		FF6D481B262AF3C500394EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6D4819262AF3C500394EFE /* Main.storyboard */; };
 		FF6D481D262AF3C600394EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF6D481C262AF3C600394EFE /* Assets.xcassets */; };
 		FF6D4820262AF3C600394EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6D481E262AF3C600394EFE /* LaunchScreen.storyboard */; };
-		FF6D4829262AF8A800394EFE /* ColorHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4828262AF8A800394EFE /* ColorHome.swift */; };
+		FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4828262AF8A800394EFE /* StyleLogin.swift */; };
+		FFA62EF2262DCF2000EE300B /* Akronim.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFA62EF1262DCF2000EE300B /* Akronim.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +24,8 @@
 		FF6D481C262AF3C600394EFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF6D481F262AF3C600394EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF6D4821262AF3C600394EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF6D4828262AF8A800394EFE /* ColorHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHome.swift; sourceTree = "<group>"; };
+		FF6D4828262AF8A800394EFE /* StyleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleLogin.swift; sourceTree = "<group>"; };
+		FFA62EF1262DCF2000EE300B /* Akronim.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Akronim.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				FF6D4815262AF3C500394EFE /* AppDelegate.swift */,
 				FF6D482A262B00E300394EFE /* ViewControllers */,
 				FF6D4827262AF87000394EFE /* StyleCourse */,
+				FFA62EF0262DCEDE00EE300B /* Font */,
 				FF0E3BFB262B46540011450A /* StoryBoard */,
 				FF6D481C262AF3C600394EFE /* Assets.xcassets */,
 				FF6D4821262AF3C600394EFE /* Info.plist */,
@@ -78,7 +81,7 @@
 		FF6D4827262AF87000394EFE /* StyleCourse */ = {
 			isa = PBXGroup;
 			children = (
-				FF6D4828262AF8A800394EFE /* ColorHome.swift */,
+				FF6D4828262AF8A800394EFE /* StyleLogin.swift */,
 			);
 			path = StyleCourse;
 			sourceTree = "<group>";
@@ -89,6 +92,14 @@
 				FF6D4817262AF3C500394EFE /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FFA62EF0262DCEDE00EE300B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FFA62EF1262DCF2000EE300B /* Akronim.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA62EF2262DCF2000EE300B /* Akronim.ttf in Resources */,
 				FF6D4820262AF3C600394EFE /* LaunchScreen.storyboard in Resources */,
 				FF6D481D262AF3C600394EFE /* Assets.xcassets in Resources */,
 				FF6D481B262AF3C500394EFE /* Main.storyboard in Resources */,
@@ -163,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
-				FF6D4829262AF8A800394EFE /* ColorHome.swift in Sources */,
+				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
 				FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
