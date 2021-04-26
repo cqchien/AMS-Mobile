@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  Attendance_App
-//
-//  Created by J.K on 4/17/21.
-//  Copyright © 2021 J.K. All rights reserved.
-//
+
 
 import UIKit
 
@@ -41,6 +35,7 @@ class ViewController: UIViewController {
             ValidationMessage.text = "Please enter your password"
             return
         }
+        APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
     }
 
     
