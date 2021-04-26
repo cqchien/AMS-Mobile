@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ValidationMessage: UILabel!
     
+    @IBOutlet weak var TitleLogin: UILabel!
+    
     // Action login
     
     @IBAction func LoginUser(_ sender: Any) {
@@ -27,7 +29,6 @@ class ViewController: UIViewController {
             ValidationMessage.text = "Please enter valid username"
             return
         }
-        
         guard let _ = PasswordTextField.text, PasswordTextField.text?.count != 0 else
         {
             ValidationMessage.textColor = UIColor.red
@@ -35,9 +36,14 @@ class ViewController: UIViewController {
             ValidationMessage.text = "Please enter your password"
             return
         }
-        APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
+        
+        loadHomeScreen()
+
+        // Call api
+       // APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
     }
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,31 +52,28 @@ class ViewController: UIViewController {
         setUpComponets()
         // Hiện thị curve
         Curved()
-        // Ẩn label
+        
         ValidationMessage.isHidden = true
-        // Ẩn password
         PasswordTextField.isSecureTextEntry = true
 
         super.viewDidLayoutSubviews()
         
-        // Hàm animation
+        // Animation function 
         UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut , animations: {
         self.StackLogin.center.y -= self.view.bounds.height - 100
         self.StackLogin.layoutIfNeeded()
         }, completion: nil)
+        
     }
     
 
     func setUpComponets() {
         styleLogin.styleTextField(UsernameTextField)
         styleLogin.styleTextField(PasswordTextField)
-        
         // Login
         styleLogin.styleFilledButton(LoginButton)
-        styleLogin.shadowView(LoginButton)
-        
-        //Stack
-        styleLogin.shadowView(StackLogin)
+        // text color
+        styleLogin.styleColorText(TitleLogin)
     }
 
     
@@ -96,6 +99,18 @@ class ViewController: UIViewController {
         layer.path = path.cgPath
         self.view.layer.addSublayer(layer)
     }
+    
+    
+// Navigation
+    
+    func loadHomeScreen(){
 
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController
+        self.present(loggedInViewController, animated: true, completion: nil)
+
+        view.window?.rootViewController = loggedInViewController
+        view.window?.makeKeyAndVisible()
+    }
 }
 

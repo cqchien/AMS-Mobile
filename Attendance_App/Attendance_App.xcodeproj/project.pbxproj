@@ -12,12 +12,15 @@
 		11CE56E82633EF7200E528A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E72633EF7200E528A0 /* User.swift */; };
 		11CE56EB2633EF9300E528A0 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EA2633EF9300E528A0 /* Token.swift */; };
 		11CE56EF2633EFD900E528A0 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EE2633EFD900E528A0 /* DataRequest.swift */; };
+		FF4D9451263669A20007006D /* NavigationLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D9450263669A20007006D /* NavigationLogin.swift */; };
+		FF4D945426366A750007006D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D945326366A750007006D /* InfoViewController.swift */; };
 		FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4815262AF3C500394EFE /* AppDelegate.swift */; };
 		FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4817262AF3C500394EFE /* ViewController.swift */; };
 		FF6D481B262AF3C500394EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6D4819262AF3C500394EFE /* Main.storyboard */; };
 		FF6D481D262AF3C600394EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF6D481C262AF3C600394EFE /* Assets.xcassets */; };
 		FF6D4820262AF3C600394EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6D481E262AF3C600394EFE /* LaunchScreen.storyboard */; };
 		FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4828262AF8A800394EFE /* StyleLogin.swift */; };
+		FF9FBB132636C6B700458F21 /* SetUpComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9FBB122636C6B700458F21 /* SetUpComponents.swift */; };
 		FFA62EF2262DCF2000EE300B /* Akronim.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFA62EF1262DCF2000EE300B /* Akronim.ttf */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,8 @@
 		11CE56E72633EF7200E528A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11CE56EA2633EF9300E528A0 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		11CE56EE2633EFD900E528A0 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		FF4D9450263669A20007006D /* NavigationLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLogin.swift; sourceTree = "<group>"; };
+		FF4D945326366A750007006D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		FF6D4812262AF3C500394EFE /* Attendance_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6D4815262AF3C500394EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF6D4817262AF3C500394EFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +40,7 @@
 		FF6D481F262AF3C600394EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF6D4821262AF3C600394EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF6D4828262AF8A800394EFE /* StyleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleLogin.swift; sourceTree = "<group>"; };
+		FF9FBB122636C6B700458F21 /* SetUpComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpComponents.swift; sourceTree = "<group>"; };
 		FFA62EF1262DCF2000EE300B /* Akronim.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Akronim.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,8 +96,27 @@
 			children = (
 				FF6D4819262AF3C500394EFE /* Main.storyboard */,
 				FF6D481E262AF3C600394EFE /* LaunchScreen.storyboard */,
+				FF6D4815262AF3C500394EFE /* AppDelegate.swift */,
 			);
 			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		FF4D944F263669760007006D /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FF6D4817262AF3C500394EFE /* ViewController.swift */,
+				FF9FBB122636C6B700458F21 /* SetUpComponents.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FF4D945226366A5B0007006D /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D945326366A750007006D /* InfoViewController.swift */,
+				FF4D9450263669A20007006D /* NavigationLogin.swift */,
+			);
+			path = InfoView;
 			sourceTree = "<group>";
 		};
 		FF6D4809262AF3C500394EFE = {
@@ -114,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				11CE56DC2633EEE600E528A0 /* API */,
-				FF6D4815262AF3C500394EFE /* AppDelegate.swift */,
 				FF6D482A262B00E300394EFE /* ViewControllers */,
 				FF6D4827262AF87000394EFE /* StyleLogin */,
 				FFA62EF0262DCEDE00EE300B /* Font */,
@@ -136,7 +160,8 @@
 		FF6D482A262B00E300394EFE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FF6D4817262AF3C500394EFE /* ViewController.swift */,
+				FF4D945226366A5B0007006D /* InfoView */,
+				FF4D944F263669760007006D /* HomeView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -223,7 +248,10 @@
 			files = (
 				11CE56E42633EF5000E528A0 /* DataReceive.swift in Sources */,
 				11CE56EB2633EF9300E528A0 /* Token.swift in Sources */,
+				FF4D9451263669A20007006D /* NavigationLogin.swift in Sources */,
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
+				FF9FBB132636C6B700458F21 /* SetUpComponents.swift in Sources */,
+				FF4D945426366A750007006D /* InfoViewController.swift in Sources */,
 				11CE56E82633EF7200E528A0 /* User.swift in Sources */,
 				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
 				11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */,

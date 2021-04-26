@@ -53,7 +53,7 @@ func APIRequest(email: String , password: String)  {
                 let result = try JSONDecoder().decode(DataReceive.self, from: data)
                 
                 // show result
-                print("Response data:\n \(result.token)")
+                print("Response data:\n \(String(describing: result.token))")
 
             }catch let jsonErr{
                 print(jsonErr)
