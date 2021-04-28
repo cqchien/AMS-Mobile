@@ -21,10 +21,8 @@ class styleLogin {
         textField.borderStyle = .none
         textField.layer.addSublayer(bottomLine)
         textField.layer.masksToBounds = true
-        
-        textField.placeholder =
-        
     }
+
     
     static func styleFilledButton(_ button:UIButton) {
         
@@ -32,7 +30,7 @@ class styleLogin {
         button.backgroundColor = UIColor.init(red: 0.09, green: 0.86, blue: 0.74, alpha: 1.00)
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.white
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
 
     }
     
@@ -40,5 +38,6 @@ class styleLogin {
         // Color title
         label.textColor = UIColor.init(red: 0.09, green: 0.72, blue: 0.64, alpha: 1.00)
     }
+    
 
 }
