@@ -44,7 +44,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // check wether user default has value
+        
         if UserDefaults.standard.value(forKey: "token") != nil {
             let info = self.storyboard?.instantiateViewController(identifier: "info") as! INFO_ViewController
             self.navigationController?.pushViewController(info, animated: true)
