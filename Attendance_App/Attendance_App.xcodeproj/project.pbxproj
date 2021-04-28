@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113405992639009A00EA29EB /* INFO_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113405982639009A00EA29EB /* INFO_ViewController.swift */; };
+		1134059E26390B8200EA29EB /* dataReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134059D26390B8200EA29EB /* dataReceive.swift */; };
 		11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56DE2633EF0300E528A0 /* APIRequest.swift */; };
-		11CE56E42633EF5000E528A0 /* DataReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E32633EF5000E528A0 /* DataReceive.swift */; };
 		11CE56E82633EF7200E528A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E72633EF7200E528A0 /* User.swift */; };
 		11CE56EB2633EF9300E528A0 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EA2633EF9300E528A0 /* Token.swift */; };
 		11CE56EF2633EFD900E528A0 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EE2633EFD900E528A0 /* DataRequest.swift */; };
@@ -22,8 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113405982639009A00EA29EB /* INFO_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFO_ViewController.swift; sourceTree = "<group>"; };
+		1134059D26390B8200EA29EB /* dataReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataReceive.swift; sourceTree = "<group>"; };
 		11CE56DE2633EF0300E528A0 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		11CE56E32633EF5000E528A0 /* DataReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReceive.swift; sourceTree = "<group>"; };
 		11CE56E72633EF7200E528A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11CE56EA2633EF9300E528A0 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		11CE56EE2633EFD900E528A0 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
@@ -49,6 +51,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113405962638F6D700EA29EB /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		11CE56DC2633EEE600E528A0 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +79,9 @@
 		11CE56E22633EF3900E528A0 /* DataRespond */ = {
 			isa = PBXGroup;
 			children = (
-				11CE56E32633EF5000E528A0 /* DataReceive.swift */,
 				11CE56E72633EF7200E528A0 /* User.swift */,
 				11CE56EA2633EF9300E528A0 /* Token.swift */,
+				1134059D26390B8200EA29EB /* dataReceive.swift */,
 			);
 			path = DataRespond;
 			sourceTree = "<group>";
@@ -113,6 +122,7 @@
 		FF6D4814262AF3C500394EFE /* Attendance_App */ = {
 			isa = PBXGroup;
 			children = (
+				113405962638F6D700EA29EB /* User */,
 				11CE56DC2633EEE600E528A0 /* API */,
 				FF6D4815262AF3C500394EFE /* AppDelegate.swift */,
 				FF6D482A262B00E300394EFE /* ViewControllers */,
@@ -121,6 +131,7 @@
 				FF0E3BFB262B46540011450A /* StoryBoard */,
 				FF6D481C262AF3C600394EFE /* Assets.xcassets */,
 				FF6D4821262AF3C600394EFE /* Info.plist */,
+				113405982639009A00EA29EB /* INFO_ViewController.swift */,
 			);
 			path = Attendance_App;
 			sourceTree = "<group>";
@@ -221,14 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11CE56E42633EF5000E528A0 /* DataReceive.swift in Sources */,
 				11CE56EB2633EF9300E528A0 /* Token.swift in Sources */,
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
 				11CE56E82633EF7200E528A0 /* User.swift in Sources */,
 				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
 				11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */,
 				FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */,
+				113405992639009A00EA29EB /* INFO_ViewController.swift in Sources */,
 				11CE56EF2633EFD900E528A0 /* DataRequest.swift in Sources */,
+				1134059E26390B8200EA29EB /* dataReceive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

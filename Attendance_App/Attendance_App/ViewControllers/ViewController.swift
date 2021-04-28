@@ -2,6 +2,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageHome: UIImageView!
@@ -19,6 +20,8 @@ class ViewController: UIViewController {
     // Action login
     
     @IBAction func LoginUser(_ sender: Any) {
+        
+        
 
         guard let _ = UsernameTextField.text, UsernameTextField.text?.count != 0 else
         {
@@ -42,6 +45,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if UserDefaults.standard.value(forKey: "token") != nil {
+            let info = self.storyboard?.instantiateViewController(identifier: "info") as! INFO_ViewController
+            self.navigationController?.pushViewController(info, animated: true)
+        }
+        
         imageHome.image = UIImage(named: "book")
         setUpComponets()
         // Hiện thị curve

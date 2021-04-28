@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import Security
 // post
 func APIRequest(email: String , password: String)  {
     
@@ -52,8 +52,10 @@ func APIRequest(email: String , password: String)  {
             do{
                 let result = try JSONDecoder().decode(DataReceive.self, from: data)
                 
+                UserDefaults.standard.set(result.token?.accessToken, forKey: "token")
+                print(response)
                 // show result
-                print("Response data:\n \(result.token)")
+                
 
             }catch let jsonErr{
                 print(jsonErr)
