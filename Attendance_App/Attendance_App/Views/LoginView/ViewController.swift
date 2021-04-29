@@ -4,7 +4,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var cur:styleCurve = styleCurve()
     
     @IBOutlet weak var imageHome: UIImageView!
     @IBOutlet weak var UsernameTextField: UITextField!
@@ -13,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var StackLogin: UIStackView!
     @IBOutlet weak var TitleLogin: UILabel!
     
+    @IBOutlet weak var SloganLogin: UILabel!
     // Action login
     
     @IBAction func LoginUser(_ sender: Any) {
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         // Main image
         imageHome.image = UIImage(named: "book")
         setUpComponets()
+        styleCurve().Curved(amplitude: 100, view: self.view)
         
         // Animation function
 //        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut , animations: {
@@ -33,12 +34,13 @@ class ViewController: UIViewController {
 //        }, completion: nil)
         
         let imageUser = UIImage(named: "user")
-        cur.addLeftImage(textField: UsernameTextField, img: imageUser!)
+        styleLogin().addLeftImage(textField: UsernameTextField, img: imageUser!)
         let imagePass = UIImage(named: "password")
-        cur.addLeftImage(textField: PasswordTextField, img: imagePass!)
+        styleLogin().addLeftImage(textField: PasswordTextField, img: imagePass!)
+        
     }
     
-
+    
     func setUpComponets() {
         styleLogin.styleTextField(UsernameTextField)
         styleLogin.styleTextField(PasswordTextField)
@@ -46,11 +48,12 @@ class ViewController: UIViewController {
         styleLogin.styleFilledButton(LoginButton)
         // text color
         styleLogin.styleColorText(TitleLogin)
-        cur.Curved()
+        styleLogin.styleColorText(SloganLogin)
+        
     }
 
 
-    
+
 // Navigation
 }
 

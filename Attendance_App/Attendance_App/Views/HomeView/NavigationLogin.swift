@@ -7,9 +7,3 @@
 //
 
 import Foundation
-
-class navigationLogin {
-    struct Storyboard {
-        static let InfoViewController = "InfoViewController"
-    }
-}

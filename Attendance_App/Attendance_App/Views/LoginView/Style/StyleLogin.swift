@@ -30,7 +30,7 @@ class styleLogin {
         button.backgroundColor = UIColor.init(red: 0.09, green: 0.86, blue: 0.74, alpha: 1.00)
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.white
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
 
     }
     
@@ -39,5 +39,14 @@ class styleLogin {
         label.textColor = UIColor.init(red: 0.09, green: 0.72, blue: 0.64, alpha: 1.00)
     }
     
-
+    func addLeftImage(textField: UITextField, img: UIImage) {
+        // Add icon left text field 
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = img
+        textField.leftView = imageView;
+        imageView.tintColor = UIColor.init(red: 0.09, green: 0.86, blue: 0.74, alpha: 1.00)
+        textField.leftViewMode = UITextField.ViewMode.always
+    }
+    
 }
