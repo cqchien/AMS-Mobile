@@ -2,8 +2,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
+    let cur: styleCurve = styleCurve()
+    let login: styleLogin = styleLogin()
     
     @IBOutlet weak var imageHome: UIImageView!
     @IBOutlet weak var UsernameTextField: UITextField!
@@ -17,6 +19,8 @@ class ViewController: UIViewController {
     
     @IBAction func LoginUser(_ sender: Any) {
        // APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
+        login.Validation(text: UsernameTextField)
+        login.Validation(text: PasswordTextField)
     }
     
     override func viewDidLoad() {
@@ -24,36 +28,37 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         // Main image
         imageHome.image = UIImage(named: "book")
-        setUpComponets()
-        styleCurve().Curved(amplitude: 100, view: self.view)
+        // Curve func
+        cur.Curved(amplitude: 100, view: self.view)
         
-        // Animation function
-//        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut , animations: {
-//        self.StackLogin.center.y -= self.view.bounds.height - 100
-//        self.StackLogin.layoutIfNeeded()
-//        }, completion: nil)
-        
+        cur.setUpComponets(user: UsernameTextField, pass: PasswordTextField, button: LoginButton, title: TitleLogin, slogan: SloganLogin)
+
+        // Set up left icon
         let imageUser = UIImage(named: "user")
         styleLogin().addLeftImage(textField: UsernameTextField, img: imageUser!)
         let imagePass = UIImage(named: "password")
         styleLogin().addLeftImage(textField: PasswordTextField, img: imagePass!)
         
-    }
-    
-    
-    func setUpComponets() {
-        styleLogin.styleTextField(UsernameTextField)
-        styleLogin.styleTextField(PasswordTextField)
-        // Login
-        styleLogin.styleFilledButton(LoginButton)
-        // text color
-        styleLogin.styleColorText(TitleLogin)
-        styleLogin.styleColorText(SloganLogin)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
 
-
-
-// Navigation
 }
 

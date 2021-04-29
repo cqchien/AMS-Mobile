@@ -49,4 +49,20 @@ class styleLogin {
         textField.leftViewMode = UITextField.ViewMode.always
     }
     
+    // Notification func
+    func Validation(text : UITextField) {
+        
+        guard let _ = text.text, text.text?.count != 0 else {
+            text.attributedPlaceholder = NSAttributedString(string: "Enter your complete information", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            return
+        }
+    }
+    
+    // Constant password
+    func isPasswordValid(_ Password : String) -> Bool{
+        let Password = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[A-Z](?=.*[0-9].{>8}$")
+        return Password.evaluate(with: Password)
+    }
+    
+
 }

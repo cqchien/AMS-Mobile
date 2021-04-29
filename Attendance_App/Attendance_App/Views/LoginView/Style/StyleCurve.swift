@@ -33,4 +33,15 @@ class styleCurve {
             view.layer.addSublayer(layer)
         }
     
+    // Set up components
+    func setUpComponets(user: UITextField,pass: UITextField, button: UIButton, title:UILabel,slogan:UILabel ) {
+        styleLogin.styleTextField(user)
+        styleLogin.styleTextField(pass)
+        // Login
+        styleLogin.styleFilledButton(button)
+        // text color
+        styleLogin.styleColorText(title)
+        styleLogin.styleColorText(slogan)
+    }
+    
 }
