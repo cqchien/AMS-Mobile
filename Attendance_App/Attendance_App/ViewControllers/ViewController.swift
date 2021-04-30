@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         imageHome.image = UIImage(named: "book")
         setUpComponets()
         // Hiện thị curve
-        Curved()
+        styleLogin().Curved(amplitude: 100, view: self.view)
         // Ẩn label
         ValidationMessage.isHidden = true
         // Ẩn password
@@ -84,28 +84,5 @@ class ViewController: UIViewController {
     }
 
     
-    
-    func Curved (amplitude:CGFloat = 100)
-    {
-        // circlecurve
-        let universalSize = self.view.bounds
-        let baseLine = self.view.bounds.height/1.2
-        let path = UIBezierPath();
-        // AddLine chạy từ point x,y
-        path.move(to: CGPoint(x: 0, y: baseLine))
-        // tỷ lệ chạy của curved (tỷ lệ float)
-        path.addCurve(to: CGPoint(x: 1 * universalSize.width, y: baseLine ), controlPoint1: CGPoint(x: universalSize.width * (0.3) , y: amplitude + baseLine), controlPoint2: CGPoint(x: universalSize.width * (0.7), y:-amplitude + baseLine))
-        // Line chạy từ
-        path.addLine(to: CGPoint(x: universalSize.width, y: universalSize.height))
-        path.addLine(to: CGPoint(x: 0, y: universalSize.height))
-
-        // Thêm thuộc tính cho khối cuverd đã tạo
-        let layer = CAShapeLayer()
-        layer.fillColor = UIColor.init(red: 0.07, green: 0.93, blue: 0.75, alpha: 1.00).cgColor
-        layer.opacity = 0.4
-        layer.path = path.cgPath
-        self.view.layer.addSublayer(layer)
-    }
-
 }
 
