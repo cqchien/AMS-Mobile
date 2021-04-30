@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                         <color key="tintColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" image="YES" keyboardKey="YES"/>
+                                            <accessibilityTraits key="traits" image="YES"/>
                                         </accessibility>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -125,7 +125,6 @@
                         <outlet property="LoginButton" destination="86A-FB-N7d" id="e9K-tZ-EGd"/>
                         <outlet property="PasswordTextField" destination="I7Y-Ot-Fcs" id="S4f-UX-X8q"/>
                         <outlet property="SloganLogin" destination="m4P-QX-ngg" id="rRa-xq-yWe"/>
-                        <outlet property="StackLogin" destination="dvu-dN-Qt1" id="NCd-vy-ZkB"/>
                         <outlet property="TitleLogin" destination="cJ0-qT-8V9" id="nKa-wE-8B1"/>
                         <outlet property="UsernameTextField" destination="Io2-eK-zwA" id="GLE-MJ-A4r"/>
                         <outlet property="imageHome" destination="p1Y-Ak-UGD" id="Qtt-9c-K44"/>

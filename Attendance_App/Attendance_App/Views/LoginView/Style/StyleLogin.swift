@@ -12,6 +12,7 @@ import UIKit
 
 class styleLogin {
     
+    
     static func styleTextField(_ textField:UITextField) {
         
         // Create lines bottom
@@ -53,7 +54,7 @@ class styleLogin {
     func Validation(text : UITextField) {
         
         guard let _ = text.text, text.text?.count != 0 else {
-            text.attributedPlaceholder = NSAttributedString(string: "Enter your complete information", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            text.attributedPlaceholder = NSAttributedString(string: "Please enter ID", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             return
         }
     }
@@ -65,4 +66,5 @@ class styleLogin {
     }
     
 
+    
 }

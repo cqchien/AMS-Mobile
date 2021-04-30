@@ -11,14 +11,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
-    @IBOutlet weak var StackLogin: UIStackView!
     @IBOutlet weak var TitleLogin: UILabel!
-    
     @IBOutlet weak var SloganLogin: UILabel!
     // Action login
     
     @IBAction func LoginUser(_ sender: Any) {
-       // APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
+        APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
         login.Validation(text: UsernameTextField)
         login.Validation(text: PasswordTextField)
     }
@@ -31,6 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Curve func
         cur.Curved(amplitude: 100, view: self.view)
         
+        // Components login
         cur.setUpComponets(user: UsernameTextField, pass: PasswordTextField, button: LoginButton, title: TitleLogin, slogan: SloganLogin)
 
         // Set up left icon
@@ -39,16 +38,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let imagePass = UIImage(named: "password")
         styleLogin().addLeftImage(textField: PasswordTextField, img: imagePass!)
         
+   
+        // Keyboard 
+        self.UsernameTextField.delegate = self
+        keyboard()
+        self.hideKeyboardWhenTappedAround()
         
+
+    }
+    
+    
+    func keyboard(){
+         // register for keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
+    
+     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            // No auto click text field
+            self.view.layoutIfNeeded()
             
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+            // key board show is 1/5 view
+                self.view.frame.origin.y -=  1/5*(keyboardSize.height)
             }
         }
     }
@@ -59,6 +73,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-
 }
 
+// Close keyboard by touching anywhere using Swift
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
