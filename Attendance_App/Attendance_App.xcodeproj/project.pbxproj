@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		113405992639009A00EA29EB /* INFO_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113405982639009A00EA29EB /* INFO_ViewController.swift */; };
-		1134059E26390B8200EA29EB /* DataReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134059D26390B8200EA29EB /* DataReceive.swift */; };
 		113405CE2639A8D000EA29EB /* GetUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113405CD2639A8D000EA29EB /* GetUserInfo.swift */; };
+		11BDA621263C6740003ECC3E /* DataReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BDA620263C6740003ECC3E /* DataReceive.swift */; };
 		11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56DE2633EF0300E528A0 /* APIRequest.swift */; };
 		11CE56E82633EF7200E528A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E72633EF7200E528A0 /* User.swift */; };
 		11CE56EB2633EF9300E528A0 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EA2633EF9300E528A0 /* Token.swift */; };
@@ -25,8 +25,8 @@
 
 /* Begin PBXFileReference section */
 		113405982639009A00EA29EB /* INFO_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFO_ViewController.swift; sourceTree = "<group>"; };
-		1134059D26390B8200EA29EB /* DataReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReceive.swift; sourceTree = "<group>"; };
 		113405CD2639A8D000EA29EB /* GetUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfo.swift; sourceTree = "<group>"; };
+		11BDA620263C6740003ECC3E /* DataReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReceive.swift; sourceTree = "<group>"; };
 		11CE56DE2633EF0300E528A0 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		11CE56E72633EF7200E528A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11CE56EA2633EF9300E528A0 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			children = (
 				11CE56E72633EF7200E528A0 /* User.swift */,
 				11CE56EA2633EF9300E528A0 /* Token.swift */,
-				1134059D26390B8200EA29EB /* DataReceive.swift */,
+				11BDA620263C6740003ECC3E /* DataReceive.swift */,
 			);
 			path = DataRespond;
 			sourceTree = "<group>";
@@ -248,10 +248,10 @@
 				11CE56E82633EF7200E528A0 /* User.swift in Sources */,
 				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
 				11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */,
+				11BDA621263C6740003ECC3E /* DataReceive.swift in Sources */,
 				FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */,
 				113405992639009A00EA29EB /* INFO_ViewController.swift in Sources */,
 				11CE56EF2633EFD900E528A0 /* DataRequest.swift in Sources */,
-				1134059E26390B8200EA29EB /* DataReceive.swift in Sources */,
 				113405CE2639A8D000EA29EB /* GetUserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
