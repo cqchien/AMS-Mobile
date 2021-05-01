@@ -39,6 +39,7 @@ class ViewController: UIViewController {
             return
         }
         APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
+        GetUserInfo()
     }
 
     

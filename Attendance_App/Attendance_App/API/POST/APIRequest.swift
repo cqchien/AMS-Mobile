@@ -55,6 +55,7 @@ func APIRequest(email: String , password: String)  {
                 // store data on user default
                 UserDefaults.standard.set(result.token, forKey: "token")
                 
+                UserDefaults.standard.set(result.token?.accessToken, forKey: "accessToken")
                 // show result
                 
 

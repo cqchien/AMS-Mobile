@@ -11,7 +11,7 @@ import Foundation
 func GetUserInfo() {
     
     // get url
-    let url = URL(string: "https://ams-be-yasu.herokuapp.com/auth/login")
+    let url = URL(string: "https://ams-be-yasu.herokuapp.com/auth/me")
     
     // guard url is valid
     guard let requestUrl = url else { fatalError() }
@@ -22,12 +22,13 @@ func GetUserInfo() {
     request.httpMethod = "GET"
     
     // Get token from user defaults that stored on app before
-    let token = UserDefaults.standard.data(forKey: "token")
+    let token = UserDefaults.standard.string(forKey: "accessToken")
+    
     
     // Set HTTP Request Header
     request.setValue("application/json", forHTTPHeaderField: "Accept")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.addValue("Bearer\(token!)", forHTTPHeaderField: "Authorization")
+    request.addValue(token!, forHTTPHeaderField: "Authorization")
     
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
         
