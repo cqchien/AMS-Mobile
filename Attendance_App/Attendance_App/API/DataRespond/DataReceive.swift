@@ -7,6 +7,6 @@
 //
 
 import Foundation
-struct DataReceive {
+struct DataReceive: Codable {
     let token: Token?
 }
