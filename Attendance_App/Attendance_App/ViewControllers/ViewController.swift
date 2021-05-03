@@ -1,6 +1,7 @@
 
 
 import UIKit
+import Alamofire
 
 @available(iOS 13.0, *)
 class ViewController: UIViewController {
@@ -39,7 +40,6 @@ class ViewController: UIViewController {
             return
         }
         APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
-        GetUserInfo()
     }
 
     
@@ -48,9 +48,10 @@ class ViewController: UIViewController {
         
         // check wether user default has value
         
-        if UserDefaults.standard.value(forKey: "token") != nil {
+        if UserDefaults.standard.value(forKey: "token2") != nil {
             let info = self.storyboard?.instantiateViewController(identifier: "info") as! INFO_ViewController
             self.navigationController?.pushViewController(info, animated: true)
+            GetUserInfo()
         }
         
         imageHome.image = UIImage(named: "book")

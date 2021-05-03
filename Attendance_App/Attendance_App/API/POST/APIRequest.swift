@@ -53,9 +53,11 @@ func APIRequest(email: String , password: String)  {
                 let result = try JSONDecoder().decode(DataReceive.self, from: data)
                 
                 // store data on user default
-                UserDefaults.standard.set(result.token, forKey: "token")
-                
+                UserDefaults.standard.set(result.token?.expiresIn, forKey: "token2")
+                print(result)
+                print(response)
                 UserDefaults.standard.set(result.token?.accessToken, forKey: "accessToken")
+//                print(UserDefaults.standard.string(forKey: "accessToken") as Any)
                 // show result
                 
 

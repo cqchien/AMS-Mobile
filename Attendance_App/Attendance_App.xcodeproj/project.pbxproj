@@ -14,6 +14,7 @@
 		11CE56E82633EF7200E528A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E72633EF7200E528A0 /* User.swift */; };
 		11CE56EB2633EF9300E528A0 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EA2633EF9300E528A0 /* Token.swift */; };
 		11CE56EF2633EFD900E528A0 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EE2633EFD900E528A0 /* DataRequest.swift */; };
+		3EC8A0FF5F1355DA99D6C1A1 /* Pods_Attendance_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E73C38304648604F329D96 /* Pods_Attendance_App.framework */; };
 		FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4815262AF3C500394EFE /* AppDelegate.swift */; };
 		FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4817262AF3C500394EFE /* ViewController.swift */; };
 		FF6D481B262AF3C500394EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6D4819262AF3C500394EFE /* Main.storyboard */; };
@@ -31,6 +32,9 @@
 		11CE56E72633EF7200E528A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11CE56EA2633EF9300E528A0 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		11CE56EE2633EFD900E528A0 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		2FB08F9015726D8C552D081C /* Pods-Attendance_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attendance_App.release.xcconfig"; path = "Target Support Files/Pods-Attendance_App/Pods-Attendance_App.release.xcconfig"; sourceTree = "<group>"; };
+		8F6DE50AD91728B98A695774 /* Pods-Attendance_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attendance_App.debug.xcconfig"; path = "Target Support Files/Pods-Attendance_App/Pods-Attendance_App.debug.xcconfig"; sourceTree = "<group>"; };
+		A7E73C38304648604F329D96 /* Pods_Attendance_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Attendance_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6D4812262AF3C500394EFE /* Attendance_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6D4815262AF3C500394EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF6D4817262AF3C500394EFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC8A0FF5F1355DA99D6C1A1 /* Pods_Attendance_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +110,24 @@
 			path = DataRequest;
 			sourceTree = "<group>";
 		};
+		4CD5BD71E98E47521340CF79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F6DE50AD91728B98A695774 /* Pods-Attendance_App.debug.xcconfig */,
+				2FB08F9015726D8C552D081C /* Pods-Attendance_App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8075871415A4B1AB344ACBB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7E73C38304648604F329D96 /* Pods_Attendance_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF0E3BFB262B46540011450A /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +142,8 @@
 			children = (
 				FF6D4814262AF3C500394EFE /* Attendance_App */,
 				FF6D4813262AF3C500394EFE /* Products */,
+				4CD5BD71E98E47521340CF79 /* Pods */,
+				8075871415A4B1AB344ACBB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF6D4824262AF3C600394EFE /* Build configuration list for PBXNativeTarget "Attendance_App" */;
 			buildPhases = (
+				C0CD7681ED3EC292EFA236F5 /* [CP] Check Pods Manifest.lock */,
 				FF6D480E262AF3C500394EFE /* Sources */,
 				FF6D480F262AF3C500394EFE /* Frameworks */,
 				FF6D4810262AF3C500394EFE /* Resources */,
+				D27ADADF9A146443F345BC20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +264,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C0CD7681ED3EC292EFA236F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Attendance_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D27ADADF9A146443F345BC20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Attendance_App/Pods-Attendance_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Attendance_App/Pods-Attendance_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Attendance_App/Pods-Attendance_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF6D480E262AF3C500394EFE /* Sources */ = {
@@ -396,6 +465,7 @@
 		};
 		FF6D4825262AF3C600394EFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F6DE50AD91728B98A695774 /* Pods-Attendance_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -413,6 +483,7 @@
 		};
 		FF6D4826262AF3C600394EFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FB08F9015726D8C552D081C /* Pods-Attendance_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
