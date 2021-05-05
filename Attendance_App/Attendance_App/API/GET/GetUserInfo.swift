@@ -6,6 +6,8 @@
 //  Copyright © 2021 J.K. All rights reserved.
 //
 
+// phần chú thích là phần GET method bằng cách bình thường không sử dụng alamofire. Toàn cân nhắc sử dụng các thường cho các phần gọi api của mình.
+
 import Foundation
 import Alamofire
 import UIKit
@@ -24,8 +26,8 @@ func GetUserInfo() {
 //
     // Get token from user defaults that stored on app before
     let token = UserDefaults.standard.string(forKey: "accessToken")
-    print(token)
-    let test = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiNDQ0ODQ2LTM4ZGQtNGU0YS1iZDg0LWJkODkzNjg5ZWQ2OSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNjIwMDEyMjg2fQ.Gbo0_0NKsAOnwQlLfHfIVLaP2hkZWNtwWuWl7UALSbs"
+
+    
 //    // Set HTTP Request Header
 //    request.addValue("application/json", forHTTPHeaderField: "Accept")
 //    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -53,8 +55,9 @@ func GetUserInfo() {
 //        }
 //    }
 //    task.resume()
-    let headers: HTTPHeaders = ["Authorization": "Bearer \(test)", "Accept": "application/json"]
+    let headers: HTTPHeaders = ["Authorization": "Bearer \(token!)", "Accept": "application/json"]
     AF.request("https://ams-be-yasu.herokuapp.com/auth/me",headers: headers).responseJSON { (response) in
         debugPrint(response)
     }
 }   
+    
