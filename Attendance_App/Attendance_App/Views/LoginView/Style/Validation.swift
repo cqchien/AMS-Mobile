@@ -1,9 +1,6 @@
 
 
 
-
-
-
 import Foundation
 import UIKit
 class Validation {
@@ -27,7 +24,7 @@ class Validation {
   
 
     // Check user and pass
-    func validation(user : UITextField, pass : UITextField)
+    func validation(user : UITextField, pass : UITextField, storyboard: UIStoryboard, view: UIView)
     {
         // using guard to unwrap the input fields
         guard let email = user.text, let password = pass.text else {
@@ -59,8 +56,16 @@ class Validation {
         }
         if (isValidateEmail == true || isValidatePass == true) {
             print("All fields are correct")
+            TransitionHome(storyboard: storyboard, view: view)
         }
+    }
+    
+    
+    func TransitionHome(storyboard:UIStoryboard, view: UIView) {
+        let homeVC = storyboard.instantiateViewController(withIdentifier: constants.homeViewController) as? HomeViewController
         
+        view.window?.rootViewController = homeVC
+        view.window?.makeKeyAndVisible()
     }
     
 }

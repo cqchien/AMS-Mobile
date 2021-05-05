@@ -19,10 +19,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func LoginUser(_ sender: Any) {
         APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
-        
-        validation.validation(user: UsernameTextField, pass: PasswordTextField)
+        // Check constraints when login
+        validation.validation(user: UsernameTextField, pass: PasswordTextField, storyboard: self.storyboard!, view: self.view)
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             if self.view.frame.origin.y == 0 {
             // key board show is 1/5 view
-                self.view.frame.origin.y -=  1/5*(keyboardSize.height)
+                self.view.frame.origin.y -=  1/3*(keyboardSize.height)
             }
         }
     }
@@ -87,7 +88,5 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    
     
 }
