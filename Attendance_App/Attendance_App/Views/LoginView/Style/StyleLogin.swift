@@ -1,10 +1,8 @@
-//
-//  ColorHome.swift
-//  Attendance_App
-//
-//  Created by J.K on 4/17/21.
-//  Copyright © 2021 J.K. All rights reserved.
-//
+
+
+
+
+
 
 import Foundation
 import UIKit
@@ -27,25 +25,33 @@ class styleLogin {
     
     static func styleFilledButton(_ button:UIButton) {
         
-        // Filled roundes corner style
+        // Filled roundes corner style and add properties
         button.backgroundColor = UIColor.init(red: 0.09, green: 0.86, blue: 0.74, alpha: 1.00)
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.white
+        // Size text in button
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
 
     }
     
     static func styleColorText(_ label:UILabel) {
         // Color title
-        label.textColor = UIColor.init(red: 0.09, green: 0.72, blue: 0.64, alpha: 1.00)
+        label.textColor = UIColor.init(red: 0.05, green: 0.70, blue: 0.56, alpha: 1.00)
     }
     
     func addLeftImage(textField: UITextField, img: UIImage) {
+        // Consider subview in the text field
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         // Add icon left text field 
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 30))
+        // Scale standard
         imageView.contentMode = .scaleAspectFit
         imageView.image = img
-        textField.leftView = imageView;
+        // Add img in subview
+        paddingView.addSubview(imageView)
+        // Assign text field left = padding
+        textField.leftView = paddingView;
+        // add properties
         imageView.tintColor = UIColor.init(red: 0.09, green: 0.86, blue: 0.74, alpha: 1.00)
         textField.leftViewMode = UITextField.ViewMode.always
     }
@@ -58,13 +64,5 @@ class styleLogin {
             return
         }
     }
-    
-    // Constant password
-    func isPasswordValid(_ Password : String) -> Bool{
-        let Password = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[A-Z](?=.*[0-9].{>8}$")
-        return Password.evaluate(with: Password)
-    }
-    
-
     
 }
