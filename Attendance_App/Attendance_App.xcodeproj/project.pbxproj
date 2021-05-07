@@ -58,11 +58,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		113405962638F6D700EA29EB /* User */ = {
+		110BFE3F26440A8200570CAA /* User Class Info */ = {
 			isa = PBXGroup;
 			children = (
+				113405982639009A00EA29EB /* INFO_ViewController.swift */,
 			);
-			path = User;
+			path = "User Class Info";
 			sourceTree = "<group>";
 		};
 		113405CC2639A87700EA29EB /* GET */ = {
@@ -157,7 +158,6 @@
 		FF6D4814262AF3C500394EFE /* Attendance_App */ = {
 			isa = PBXGroup;
 			children = (
-				113405962638F6D700EA29EB /* User */,
 				11CE56DC2633EEE600E528A0 /* API */,
 				FF6D4815262AF3C500394EFE /* AppDelegate.swift */,
 				FF6D482A262B00E300394EFE /* ViewControllers */,
@@ -166,7 +166,7 @@
 				FF0E3BFB262B46540011450A /* StoryBoard */,
 				FF6D481C262AF3C600394EFE /* Assets.xcassets */,
 				FF6D4821262AF3C600394EFE /* Info.plist */,
-				113405982639009A00EA29EB /* INFO_ViewController.swift */,
+				110BFE3F26440A8200570CAA /* User Class Info */,
 			);
 			path = Attendance_App;
 			sourceTree = "<group>";

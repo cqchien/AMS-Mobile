@@ -15,10 +15,12 @@ struct User: Codable {
     let id: String?
     let createdAt: String?
     let updatedAt: String?
-    let firstName: String?
-    let lastName: String?
+    let deletedAt: String?
+    let name: String?
     let role: String?
+    let schoolYear: String?
     let email: String?
-    let avatar: String?
-    let phone: String?
+    
+    
+    let studentCode: String?
 }
