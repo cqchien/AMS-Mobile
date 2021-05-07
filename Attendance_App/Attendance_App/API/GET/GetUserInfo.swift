@@ -50,6 +50,9 @@ func GetUserInfo() {
             UserDefaults.standard.set(result.createdAt!, forKey: "createdAt")
             UserDefaults.standard.set(result.updatedAt!, forKey: "updatedAt")
             UserDefaults.standard.set(result.role!, forKey: "role")
+            UserDefaults.standard.set(result.schoolYear!, forKey: "schoolYear")
+            UserDefaults.standard.set(result.email!, forKey: "email")
+            UserDefaults.standard.set(result.studentCode!, forKey: "studentCode")
             
             print(result)
             print(response)
