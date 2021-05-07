@@ -148,18 +148,36 @@
                                     <constraint firstAttribute="height" constant="100" id="mU4-II-ySk"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-ku-Ltn">
+                                <rect key="frame" x="0.0" y="214" width="375" height="406"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="INFO" rowHeight="90" id="VaA-Xi-sOS" customClass="INFO_TableViewCell" customModule="Attendance_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VaA-Xi-sOS" id="Tp8-GK-4dU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gIz-2K-TLs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vVG-ku-Ltn" firstAttribute="height" secondItem="1RG-5b-NnM" secondAttribute="height" multiplier="0.5" id="3ye-Sn-YIj"/>
+                            <constraint firstItem="vVG-ku-Ltn" firstAttribute="leading" secondItem="gIz-2K-TLs" secondAttribute="leading" id="A7D-v9-Geo"/>
+                            <constraint firstItem="vVG-ku-Ltn" firstAttribute="width" secondItem="1RG-5b-NnM" secondAttribute="width" id="MCD-Eb-fUE"/>
                             <constraint firstItem="Lz4-2T-UU7" firstAttribute="centerX" secondItem="gIz-2K-TLs" secondAttribute="centerX" id="TYj-2M-cMA"/>
+                            <constraint firstItem="vVG-ku-Ltn" firstAttribute="top" secondItem="Lz4-2T-UU7" secondAttribute="bottom" constant="30" id="ah8-lP-gaW"/>
                             <constraint firstItem="Lz4-2T-UU7" firstAttribute="top" secondItem="gIz-2K-TLs" secondAttribute="top" constant="40" id="egS-Nz-eNM"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGE-uj-zrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="132"/>
+            <point key="canvasLocation" x="1853.5999999999999" y="131.52709359605913"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8d4-u8-nbK">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110BFE4426454D1900570CAA /* INFO_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BFE4326454D1900570CAA /* INFO_TableViewCell.swift */; };
 		113405992639009A00EA29EB /* INFO_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113405982639009A00EA29EB /* INFO_ViewController.swift */; };
 		113405CE2639A8D000EA29EB /* GetUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113405CD2639A8D000EA29EB /* GetUserInfo.swift */; };
 		11BDA621263C6740003ECC3E /* DataReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BDA620263C6740003ECC3E /* DataReceive.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110BFE4326454D1900570CAA /* INFO_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFO_TableViewCell.swift; sourceTree = "<group>"; };
 		113405982639009A00EA29EB /* INFO_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFO_ViewController.swift; sourceTree = "<group>"; };
 		113405CD2639A8D000EA29EB /* GetUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfo.swift; sourceTree = "<group>"; };
 		11BDA620263C6740003ECC3E /* DataReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReceive.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				113405982639009A00EA29EB /* INFO_ViewController.swift */,
+				110BFE4326454D1900570CAA /* INFO_TableViewCell.swift */,
 			);
 			path = "User Class Info";
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CE56EB2633EF9300E528A0 /* Token.swift in Sources */,
+				110BFE4426454D1900570CAA /* INFO_TableViewCell.swift in Sources */,
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
 				11CE56E82633EF7200E528A0 /* User.swift in Sources */,
 				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
