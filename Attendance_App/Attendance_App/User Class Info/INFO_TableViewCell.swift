@@ -9,7 +9,6 @@
 import UIKit
 
 class INFO_TableViewCell: UITableViewCell {
-
     
     @IBOutlet weak var lbl_title: UILabel!
     

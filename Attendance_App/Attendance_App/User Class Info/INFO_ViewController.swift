@@ -10,8 +10,11 @@ import UIKit
 
 // Demo new screen 
 
-class INFO_ViewController: UIViewController {
-
+class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var myTable: UITableView!
+    
+    
    
     
     override func viewDidLoad() {
@@ -23,8 +26,21 @@ class INFO_ViewController: UIViewController {
 //        view.layer.addSublayer(gradientLayer)
         
         GetUserInfo()
+        myTable.delegate = self
+        myTable.dataSource = self
+        
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6 // 6 lines of infor: name, role, schoolyear, email, class, student code
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let line =
+            myTable.dequeueReusableCell(withIdentifier: "INFO") as! INFO_TableViewCell
+        
+        return line
+    }
 
     
 
