@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 
 func GetClassInfo() {
+    //get URL
+    let url = URL(string: "http://localhost:3000/class?order=ASC&page=1&take=10")
     
-    let url = URL(string: "http://localhost:3000/auth/class")
-
+    // guard url is valid
     guard let requestUrl = url else { fatalError() }
     
     var request = URLRequest(url: requestUrl)
@@ -26,7 +27,7 @@ func GetClassInfo() {
     // Set HTTP Request Header
     request.addValue("application/json", forHTTPHeaderField: "Accept")
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.setValue("Bearer \(token!)", forHTTPHeaderField: "Authorization")
+    request.setValue("Bearer\(token!)", forHTTPHeaderField: "Authorization")
     
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
         
@@ -37,18 +38,17 @@ func GetClassInfo() {
         
         // guard we have data
         guard let data = data else {return}
-        
+
         do {
-            
-            let result = try JSONDecoder().decode(Class.self, from: data)
-            
+            let result = try JSONDecoder().decode([Class].self, from: data)
             print(result)
             print(response!)
-        }
-        catch let jsonErr {
-            print(jsonErr)
+            
+        } catch {
+            print(error.localizedDescription)
         }
     }
+    
     task.resume()
 
 }

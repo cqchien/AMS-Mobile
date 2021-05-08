@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="1069.5999999999999" y="132.26600985221674"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Class View Controller-->
         <scene sceneID="Duu-CI-52W">
             <objects>
-                <viewController storyboardIdentifier="HomeView" id="SMi-PS-lXV" customClass="HomeViewController" customModule="Attendance_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClassView" id="SMi-PS-lXV" customClass="ClassViewController" customModule="Attendance_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="InfoViewController" id="pkr-3P-h20">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

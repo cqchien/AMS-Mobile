@@ -62,9 +62,10 @@ class Validation {
     
     // transition to home
     func TransitionHome(storyboard:UIStoryboard, view: UIView) {
-        let homeVC = storyboard.instantiateViewController(withIdentifier: constants.homeViewController) as? HomeViewController
         
-        view.window?.rootViewController = homeVC
+        let classVC = storyboard.instantiateViewController(withIdentifier: constants.classViewController) as? ClassViewController
+        
+        view.window?.rootViewController = classVC
         view.window?.makeKeyAndVisible()
     }
     

@@ -14,7 +14,7 @@
 		11CE56EF2633EFD900E528A0 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EE2633EFD900E528A0 /* DataRequest.swift */; };
 		FF1CD9672642B131000FCD5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1CD9662642B131000FCD5B /* Constants.swift */; };
 		FF24F307263CF2310034EF59 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24F306263CF2310034EF59 /* Validation.swift */; };
-		FF4D945426366A750007006D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D945326366A750007006D /* HomeViewController.swift */; };
+		FF47FFFC2646F83600AC2833 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF47FFFB2646F83600AC2833 /* ClassViewController.swift */; };
 		FF54D49D2646C0D500C47836 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54D49C2646C0D500C47836 /* Class.swift */; };
 		FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4815262AF3C500394EFE /* AppDelegate.swift */; };
 		FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4817262AF3C500394EFE /* ViewController.swift */; };
@@ -48,7 +48,7 @@
 		11CE56EE2633EFD900E528A0 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		FF1CD9662642B131000FCD5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF24F306263CF2310034EF59 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		FF4D945326366A750007006D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FF47FFFB2646F83600AC2833 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		FF54D49C2646C0D500C47836 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		FF6D4812262AF3C500394EFE /* Attendance_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6D4815262AF3C500394EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,13 +132,13 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
-		FF4D945226366A5B0007006D /* HomeView */ = {
+		FF4D945226366A5B0007006D /* ClassView */ = {
 			isa = PBXGroup;
 			children = (
-				FF4D945326366A750007006D /* HomeViewController.swift */,
 				FF1CD9662642B131000FCD5B /* Constants.swift */,
+				FF47FFFB2646F83600AC2833 /* ClassViewController.swift */,
 			);
-			path = HomeView;
+			path = ClassView;
 			sourceTree = "<group>";
 		};
 		FF6D4809262AF3C500394EFE = {
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				FF4D944F263669760007006D /* LoginView */,
-				FF4D945226366A5B0007006D /* HomeView */,
+				FF4D945226366A5B0007006D /* ClassView */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
@@ -283,9 +283,9 @@
 				11CE56EB2633EF9300E528A0 /* Token.swift in Sources */,
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
 				FF54D49D2646C0D500C47836 /* Class.swift in Sources */,
-				FF4D945426366A750007006D /* HomeViewController.swift in Sources */,
 				11CE56E82633EF7200E528A0 /* User.swift in Sources */,
 				FF76B7E826454976003AA6AA /* GetClassInfo.swift in Sources */,
+				FF47FFFC2646F83600AC2833 /* ClassViewController.swift in Sources */,
 				FFD3747726399BE900157812 /* StyleCurve.swift in Sources */,
 				FF76B7E6264529E8003AA6AA /* GetUserInfo.swift in Sources */,
 				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
