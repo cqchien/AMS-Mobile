@@ -14,8 +14,9 @@ class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var myTable: UITableView!
     
-    let info = [UserDefaults.standard.string(forKey: "id"), UserDefaults.standard.string(forKey: "role"), UserDefaults.standard.string(forKey: "email"), UserDefaults.standard.string(forKey: "mainClass"), UserDefaults.standard.string(forKey: "studentCode"), UserDefaults.standard.string(forKey: "name")]
-   
+    let info = [UserDefaults.standard.string(forKey: "name"),UserDefaults.standard.string(forKey: "id"), UserDefaults.standard.string(forKey: "role"), UserDefaults.standard.string(forKey: "email"), UserDefaults.standard.string(forKey: "mainClass"), UserDefaults.standard.string(forKey: "studentCode")]
+    
+    let arr_title = ["name", "id", "role", "email", "mainClass", "studentCode"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,6 @@ class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        gradientLayer.colors = [hexStringToUIColor(hex: "#0CC1A2").cgColor]
 //        view.layer.addSublayer(gradientLayer)
         
-        GetUserInfo()
         myTable.delegate = self
         myTable.dataSource = self
         
@@ -38,7 +38,8 @@ class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let line = myTable.dequeueReusableCell(withIdentifier: "INFO") as! INFO_TableViewCell
         
-        
+        line.lbl_title.text = arr_title[indexPath.row]
+        line.lbl_content.text =  info[indexPath.row]
         return line
     }
 

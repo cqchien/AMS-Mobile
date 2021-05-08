@@ -51,7 +51,8 @@ class ViewController: UIViewController {
         if UserDefaults.standard.value(forKey: "token2") != nil {
             let info = self.storyboard?.instantiateViewController(identifier: "info") as! INFO_ViewController
             self.navigationController?.pushViewController(info, animated: true)
-            
+            GetUserInfo()
+
         }
         
         imageHome.image = UIImage(named: "book")

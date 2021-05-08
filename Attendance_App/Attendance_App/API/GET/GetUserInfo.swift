@@ -14,7 +14,7 @@ import UIKit
 func GetUserInfo() {
     
     // get url
-    let url = URL(string: "https://ams-be-yasu.herokuapp.com/auth/me")
+    let url = URL(string: "http://localhost:3000/auth/me")
 
     // guard url is valid
     guard let requestUrl = url else { fatalError() }
@@ -46,6 +46,8 @@ func GetUserInfo() {
         do {
 
             let result = try JSONDecoder().decode(User.self, from: data)
+            print(result)
+            print(response)
             UserDefaults.standard.set(result.id!, forKey: "id")
             UserDefaults.standard.set(result.createdAt!, forKey: "createdAt")
             UserDefaults.standard.set(result.updatedAt!, forKey: "updatedAt")
@@ -55,8 +57,7 @@ func GetUserInfo() {
             UserDefaults.standard.setValue(result.mainClass!, forKey: "mainClass")
             UserDefaults.standard.set(result.studentCode!, forKey: "studentCode")
             UserDefaults.standard.setValue(result.name!, forKey: "name")
-            print(result)
-            print(response)
+            
         }
         catch let jsonErr {
             print(jsonErr)
