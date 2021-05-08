@@ -3,6 +3,7 @@
 
 import Foundation
 import UIKit
+
 class Validation {
  
     public func validateEmailId(emailID: String) -> Bool {
@@ -15,13 +16,14 @@ class Validation {
     }
     public func validatePassword(password: String) -> Bool {
         //Minimum 7 characters at least 1 Alphabet and 1 Number:
-        let passRegEx = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{7,}$"
+        let passRegEx = ".{0,8}|[^0-9]"
         let trimmedString = password.trimmingCharacters(in: .whitespaces)
         let validatePassord = NSPredicate(format:"SELF MATCHES %@", passRegEx)
         let isvalidatePass = validatePassord.evaluate(with: trimmedString)
         return isvalidatePass
     }
-  
+    // ^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{7,}$
+    
 
     // Check user and pass
     func validation(user : UITextField, pass : UITextField, storyboard: UIStoryboard, view: UIView)
@@ -33,34 +35,32 @@ class Validation {
         
         let isValidateEmail = self.validateEmailId(emailID: email)
         
-        if email.count == 0 {
-            user.attributedPlaceholder = NSAttributedString(string: "Please enter ID", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-        } else {
-            
-        }
-        
         if (isValidateEmail == false) {
             print("Incorrect Email")
+            user.attributedPlaceholder = NSAttributedString(string: "Please Enter Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             return
         } else{
             print("Email is correct" )
         }
        
-        
         let isValidatePass = self.validatePassword(password: password)
+        
         if (isValidatePass == false) {
             print("Incorrect Pass")
+            pass.attributedPlaceholder = NSAttributedString(string: "Please Enter Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             return
         } else{
             print("Password is correct" )
         }
+        
         if (isValidateEmail == true || isValidatePass == true) {
-            print("All fields are correct")
+            print("All is correct")
             TransitionHome(storyboard: storyboard, view: view)
         }
     }
     
     
+    // transition to home
     func TransitionHome(storyboard:UIStoryboard, view: UIView) {
         let homeVC = storyboard.instantiateViewController(withIdentifier: constants.homeViewController) as? HomeViewController
         

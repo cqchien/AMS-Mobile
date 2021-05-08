@@ -92,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86A-FB-N7d">
-                                <rect key="frame" x="37" y="453" width="300" height="50"/>
+                                <rect key="frame" x="37.5" y="453.5" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="774-7q-pn8"/>
                                     <constraint firstAttribute="height" constant="50" id="ycX-sH-c5l"/>

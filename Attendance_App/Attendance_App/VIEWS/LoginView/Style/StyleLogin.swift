@@ -56,13 +56,4 @@ class styleLogin {
         textField.leftViewMode = UITextField.ViewMode.always
     }
     
-    // Notification func
-    func Validation(text : UITextField) {
-        
-        guard let _ = text.text, text.text?.count != 0 else {
-            text.attributedPlaceholder = NSAttributedString(string: "Please enter ID", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-            return
-        }
-    }
-    
 }
