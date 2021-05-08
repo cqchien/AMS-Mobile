@@ -14,7 +14,7 @@ class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var myTable: UITableView!
     
-    
+    let info = [UserDefaults.standard.string(forKey: "id"), UserDefaults.standard.string(forKey: "role"), UserDefaults.standard.string(forKey: "email"), UserDefaults.standard.string(forKey: "mainClass"), UserDefaults.standard.string(forKey: "studentCode"), UserDefaults.standard.string(forKey: "name")]
    
     
     override func viewDidLoad() {
@@ -36,8 +36,8 @@ class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let line =
-            myTable.dequeueReusableCell(withIdentifier: "INFO") as! INFO_TableViewCell
+        let line = myTable.dequeueReusableCell(withIdentifier: "INFO") as! INFO_TableViewCell
+        
         
         return line
     }

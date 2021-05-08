@@ -20,7 +20,6 @@ struct User: Codable {
     let role: String?
     let schoolYear: String?
     let email: String?
-    
-    
+    let mainClass: String?
     let studentCode: String?
 }

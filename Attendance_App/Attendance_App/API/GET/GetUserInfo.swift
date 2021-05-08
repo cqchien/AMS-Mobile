@@ -52,8 +52,9 @@ func GetUserInfo() {
             UserDefaults.standard.set(result.role!, forKey: "role")
             UserDefaults.standard.set(result.schoolYear!, forKey: "schoolYear")
             UserDefaults.standard.set(result.email!, forKey: "email")
+            UserDefaults.standard.setValue(result.mainClass!, forKey: "mainClass")
             UserDefaults.standard.set(result.studentCode!, forKey: "studentCode")
-            
+            UserDefaults.standard.setValue(result.name!, forKey: "name")
             print(result)
             print(response)
         }
