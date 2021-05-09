@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 func GetClassInfo() {
     //get URL
     let url = URL(string: "http://localhost:3000/class?order=ASC&page=1&take=10")
@@ -37,18 +38,20 @@ func GetClassInfo() {
         }
         
         // guard we have data
-        guard let data = data else {return}
-
+        guard let jsonData = data else {return}
+        
+        let decoder = JSONDecoder()
+        
         do {
-            let result = try JSONDecoder().decode([Class].self, from: data)
-            print(result)
-            print(response!)
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let result = try decoder.decode(Class.self, from: jsonData)
+            print(result.data.count)
             
         } catch {
             print(error.localizedDescription)
+            debugPrint(error)
         }
     }
-    
     task.resume()
 
 }

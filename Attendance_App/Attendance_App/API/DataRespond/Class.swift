@@ -10,11 +10,17 @@ import Foundation
 
 // Response
 // Class infor
+
 struct Class: Codable {
-    let data: ClassDto?
+    let data: [ClassDto]
+    private enum CodingKeys: String, CodingKey {
+        case data
+    }
+
 }
 
-struct ClassDto: Codable{
+struct ClassDto: Codable
+{
     let id: String?
     let createdAt: String?
     let updatedAt: String?
@@ -26,22 +32,30 @@ struct ClassDto: Codable{
     let startTime: String?
     let endTime: String?
     let qrCode: String?
-    let teacher: TeacherDto?
+    let teacher: TeacherDto
+
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case createdAt
+        case updatedAt
+        case deletedAt
+        case courseCode
+        case type
+        case desc
+        case room
+        case startTime
+        case endTime
+        case qrCode
+        case teacher
+    }
+    
 }
 
 struct TeacherDto: Codable {
     let name: String?
-
-    private enum role: String {
-        case USER
-        case STUDENT
-        case TEACHER
-        case ADMIN
-        case TRAININGROOM
-    }
-
-    let avatarLink: String?
     let teacherCode: String?
     let email: String?
+    private enum CodingKeys: String, CodingKey {
+        case name, teacherCode, email
+    }
 }
-
