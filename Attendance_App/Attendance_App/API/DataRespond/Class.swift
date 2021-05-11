@@ -18,13 +18,13 @@ struct Class: Codable {
 }
 
 struct ClassDto: Codable {
-    let id, createdAt, updatedAt: String
+    let id, createdAt, updatedAt: String?
     let deletedAt: JSONNull? // Represents 'null' in JSON
-    let courseCode, type: String
+    let courseCode, type: String?
     let desc: JSONNull?
-    let room, startTime, endTime: String
+    let room, startTime, endTime: String?
     let qrCode: JSONNull?
-    let teacher: TeacherDto
+    let teacher: TeacherDto?
 }
 
 
@@ -70,11 +70,11 @@ enum TeacherDto: Codable {
 
 // Case Teacher
 struct TeacherClass: Codable {
-    let id, createdAt, updatedAt: String
+    let id, createdAt, updatedAt: String?
     let deletedAt: JSONNull?
-    let name, role: String
+    let name, role: String?
     let avatarLink: JSONNull?
-    let email, teacherCode: String
+    let email, teacherCode: String?
 }
 
 

@@ -28,7 +28,7 @@ func GetClassInfo() {
     // Set HTTP Request Header
     request.addValue("application/json", forHTTPHeaderField: "Accept")
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.setValue("Bearer \(token!)", forHTTPHeaderField: "Authorization")
+    request.setValue("Bearer \(token ?? "")", forHTTPHeaderField: "Authorization")
     
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
         
