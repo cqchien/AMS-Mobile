@@ -28,7 +28,7 @@ func GetClassInfo() {
     // Set HTTP Request Header
     request.addValue("application/json", forHTTPHeaderField: "Accept")
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.setValue("Bearer\(token!)", forHTTPHeaderField: "Authorization")
+    request.setValue("Bearer \(token!)", forHTTPHeaderField: "Authorization")
     
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
         
@@ -38,15 +38,19 @@ func GetClassInfo() {
         }
         
         // guard we have data
-        guard let jsonData = data else {return}
+        guard let jsonData = data else {
+            print(data!)
+            return
+            
+        }
         
         let decoder = JSONDecoder()
         
         do {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let result = try decoder.decode(Class.self, from: jsonData)
-            print(result.data.count)
-            
+            print(result)
+            //print(response!)
         } catch {
             print(error.localizedDescription)
             debugPrint(error)

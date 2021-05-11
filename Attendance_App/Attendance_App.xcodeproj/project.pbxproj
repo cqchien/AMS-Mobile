@@ -81,7 +81,7 @@
 				11CE56ED2633EFC300E528A0 /* DataRequest */,
 				11CE56E22633EF3900E528A0 /* DataRespond */,
 				11CE56DD2633EEEC00E528A0 /* APIRequest */,
-				FF76B7E426452941003AA6AA /* Gets */,
+				FF76B7E426452941003AA6AA /* Get */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				11CE56DC2633EEE600E528A0 /* API */,
-				FF6D482A262B00E300394EFE /* VIEWS */,
+				FF6D482A262B00E300394EFE /* VIEW */,
 				FFA62EF0262DCEDE00EE300B /* Font */,
 				FF0E3BFB262B46540011450A /* StoryBoard */,
 				FF6D481C262AF3C600394EFE /* Assets.xcassets */,
@@ -180,22 +180,22 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
-		FF6D482A262B00E300394EFE /* VIEWS */ = {
+		FF6D482A262B00E300394EFE /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
 				FF4D944F263669760007006D /* LoginView */,
 				FF4D945226366A5B0007006D /* ClassView */,
 			);
-			path = VIEWS;
+			path = VIEW;
 			sourceTree = "<group>";
 		};
-		FF76B7E426452941003AA6AA /* Gets */ = {
+		FF76B7E426452941003AA6AA /* Get */ = {
 			isa = PBXGroup;
 			children = (
 				FF76B7E726454976003AA6AA /* GetClassInfo.swift */,
 				FF76B7E5264529E8003AA6AA /* GetUserInfo.swift */,
 			);
-			path = Gets;
+			path = Get;
 			sourceTree = "<group>";
 		};
 		FFA62EF0262DCEDE00EE300B /* Font */ = {

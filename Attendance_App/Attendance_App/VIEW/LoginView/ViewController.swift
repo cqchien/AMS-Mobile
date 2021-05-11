@@ -18,12 +18,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // Action login
     
     @IBAction func LoginUser(_ sender: Any) {
-        APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
          //Check constraints when login
         validation.validation(user: UsernameTextField, pass: PasswordTextField, storyboard: self.storyboard!, view: self.view)
+        APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
+        //ErrorValid()
         
     }
-    
     
     override func viewDidLoad() {
         
@@ -76,18 +76,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.view.frame.origin.y = 0
         }
     }
+    
+    func ErrorValid()
+    {
+        let Myalert = UIAlertController(title: "Error", message: "Email or password incorrect", preferredStyle: .alert)
+        Myalert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in}))
+        present(Myalert, animated: true, completion: nil)
+    }
 
 }
 
+
+
 // Close keyboard by touching anywhere using Swift
 extension UIViewController {
+    
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-    }
+        }
     @objc func dismissKeyboard() {
         view.endEditing(true)
-    }
+        }
 
-}
+    }

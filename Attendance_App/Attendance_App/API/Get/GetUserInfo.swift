@@ -44,7 +44,7 @@ func GetUserInfo() {
                 let result = try JSONDecoder().decode(User.self, from: data)
                 
                 print(result)
-                print(response!)
+                //print(response!)
             }
             catch let jsonErr {
                 print(jsonErr)

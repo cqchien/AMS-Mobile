@@ -13,7 +13,6 @@ class ClassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         GetClassInfo()
-        print(" XIN CHAO")
     }
     
 }

@@ -54,7 +54,7 @@ func APIRequest(email: String , password: String)  {
             // store data on user default
             UserDefaults.standard.set(result.token?.expiresIn, forKey: "token2")
             print(result)
-            print(response!)
+            //print(response!)
             UserDefaults.standard.set(result.token?.accessToken, forKey: "accessToken")
     
         }catch let jsonErr{
