@@ -16,7 +16,7 @@ class styleLogin {
         // Create lines bottom
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0, y: textField.frame.size.height - 10, width: textField.frame.size.width + 2*textField.bounds.size.width , height: 1)
-        bottomLine.backgroundColor = UIColor.init(red: 0.39, green: 1.00, blue: 0.90, alpha: 1.00).cgColor
+        bottomLine.backgroundColor = UIColor.init(red: 0.09, green: 0.86, blue: 0.74, alpha: 1.00).cgColor
         textField.borderStyle = .none
         textField.layer.addSublayer(bottomLine)
         textField.layer.masksToBounds = true
@@ -41,9 +41,9 @@ class styleLogin {
     
     func addLeftImage(textField: UITextField, img: UIImage) {
         // Consider subview in the text field
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
         // Add icon left text field 
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 25, height: 35))
         // Scale standard
         imageView.contentMode = .scaleAspectFit
         imageView.image = img
@@ -52,7 +52,7 @@ class styleLogin {
         // Assign text field left = padding
         textField.leftView = paddingView;
         // add properties
-        imageView.tintColor = UIColor.init(red: 0.09, green: 0.86, blue: 0.74, alpha: 1.00)
+        imageView.tintColor = UIColor.init(red: 0.09, green: 0.86, blue: 0.74, alpha: 0.7)
         textField.leftViewMode = UITextField.ViewMode.always
     }
     
