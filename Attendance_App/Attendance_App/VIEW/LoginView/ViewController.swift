@@ -6,9 +6,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     let cur: styleCurve = styleCurve()
     let login: styleLogin = styleLogin()
-    
-    var validation = Validation()
+    var validation: Validation = Validation()
 
+    // Outlet login
     @IBOutlet weak var imageHome: UIImageView!
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -20,8 +20,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginUser(_ sender: Any) {
          //Check constraints when login
         validation.validation(user: UsernameTextField, pass: PasswordTextField, storyboard: self.storyboard!, view: self.view)
-        APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
-        //ErrorValid()
         
     }
     
@@ -48,6 +46,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.PasswordTextField.delegate = self
         keyboard()
         self.hideKeyboardWhenTappedAround()
+        
+        
         
     }
     
@@ -77,12 +77,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func ErrorValid()
-    {
-        let Myalert = UIAlertController(title: "Error", message: "Email or password incorrect", preferredStyle: .alert)
-        Myalert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in}))
-        present(Myalert, animated: true, completion: nil)
-    }
+//    func ErrorValid()
+//    {
+//        let Myalert = UIAlertController(title: "Error", message: "Email or password incorrect", preferredStyle: .alert)
+//        Myalert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in}))
+//        present(Myalert, animated: true, completion: nil)
+//    }
 
 }
 
