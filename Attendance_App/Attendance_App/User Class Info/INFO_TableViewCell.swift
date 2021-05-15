@@ -10,13 +10,16 @@ import UIKit
 
 class INFO_TableViewCell: UITableViewCell {
     
-    @IBOutlet weak var lbl_title: UILabel!
+   
+    @IBOutlet weak var icon: UIImageView!
     
     @IBOutlet weak var lbl_content: UILabel!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

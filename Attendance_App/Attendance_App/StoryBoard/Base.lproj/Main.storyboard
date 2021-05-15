@@ -159,33 +159,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFa-1r-GE1" userLabel="title">
-                                                    <rect key="frame" x="26" y="31.666666666666671" width="75" height="27"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-DQ-qdc" userLabel="content">
                                                     <rect key="frame" x="236.66666666666666" y="36" width="112.33333333333334" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dBU-Ne-25S" userLabel="icon">
+                                                    <rect key="frame" x="20" y="25" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="EQI-SZ-kTk"/>
+                                                        <constraint firstAttribute="height" constant="40" id="FL7-CZ-EXB"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Q7x-MN-9C2"/>
+                                                        <constraint firstAttribute="width" constant="40" id="RgQ-g7-XC7"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="iFa-1r-GE1" firstAttribute="centerY" secondItem="Tp8-GK-4dU" secondAttribute="centerY" id="1x6-E3-KFs"/>
-                                                <constraint firstItem="iFa-1r-GE1" firstAttribute="height" secondItem="Tp8-GK-4dU" secondAttribute="height" multiplier="0.3" id="Dpl-YZ-ZTh"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="PKT-DQ-qdc" secondAttribute="trailing" constant="10" id="ajL-ag-zfk"/>
-                                                <constraint firstItem="iFa-1r-GE1" firstAttribute="leading" secondItem="Tp8-GK-4dU" secondAttribute="leadingMargin" constant="10" id="e6d-dw-hCP"/>
+                                                <constraint firstItem="dBU-Ne-25S" firstAttribute="leading" secondItem="Tp8-GK-4dU" secondAttribute="leading" constant="20" id="bNE-Pt-DDs"/>
                                                 <constraint firstItem="PKT-DQ-qdc" firstAttribute="height" secondItem="Tp8-GK-4dU" secondAttribute="height" multiplier="0.2" id="gc6-WB-c74"/>
                                                 <constraint firstItem="PKT-DQ-qdc" firstAttribute="width" secondItem="Tp8-GK-4dU" secondAttribute="width" multiplier="0.3" id="pxx-ki-qv2"/>
-                                                <constraint firstItem="iFa-1r-GE1" firstAttribute="width" secondItem="Tp8-GK-4dU" secondAttribute="width" multiplier="0.2" id="rIn-nn-S4d"/>
                                                 <constraint firstItem="PKT-DQ-qdc" firstAttribute="centerY" secondItem="Tp8-GK-4dU" secondAttribute="centerY" id="spg-q8-6Xd"/>
+                                                <constraint firstItem="dBU-Ne-25S" firstAttribute="centerY" secondItem="Tp8-GK-4dU" secondAttribute="centerY" id="urT-Zq-GPt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="icon" destination="dBU-Ne-25S" id="qmE-2Z-0Z3"/>
                                             <outlet property="lbl_content" destination="PKT-DQ-qdc" id="M0o-cI-J88"/>
-                                            <outlet property="lbl_title" destination="iFa-1r-GE1" id="GWz-oU-Tbf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
