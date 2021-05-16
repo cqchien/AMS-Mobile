@@ -12,6 +12,9 @@
 		11CE56E82633EF7200E528A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E72633EF7200E528A0 /* User.swift */; };
 		11CE56EB2633EF9300E528A0 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EA2633EF9300E528A0 /* Token.swift */; };
 		11CE56EF2633EFD900E528A0 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EE2633EFD900E528A0 /* DataRequest.swift */; };
+		11D48CD5265158B00083F9C5 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D48CD4265158B00083F9C5 /* User.storyboard */; };
+		11D48CD926515CF50083F9C5 /* UserInfo_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D48CD826515CF50083F9C5 /* UserInfo_ViewController.swift */; };
+		11D48CDE265167B50083F9C5 /* INFO_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D48CDD265167B50083F9C5 /* INFO_TableViewCell.swift */; };
 		FF1CD9672642B131000FCD5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1CD9662642B131000FCD5B /* Constants.swift */; };
 		FF24F307263CF2310034EF59 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24F306263CF2310034EF59 /* Validation.swift */; };
 		FF47FFFC2646F83600AC2833 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF47FFFB2646F83600AC2833 /* ClassViewController.swift */; };
@@ -34,6 +37,8 @@
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
 			fileType = image.tiff;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -47,6 +52,9 @@
 		11CE56E72633EF7200E528A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11CE56EA2633EF9300E528A0 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		11CE56EE2633EFD900E528A0 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		11D48CD4265158B00083F9C5 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		11D48CD826515CF50083F9C5 /* UserInfo_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo_ViewController.swift; sourceTree = "<group>"; };
+		11D48CDD265167B50083F9C5 /* INFO_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFO_TableViewCell.swift; sourceTree = "<group>"; };
 		FF1CD9662642B131000FCD5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF24F306263CF2310034EF59 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		FF47FFFB2646F83600AC2833 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
@@ -115,11 +123,21 @@
 			path = DataRequest;
 			sourceTree = "<group>";
 		};
+		11D48CD726515CC20083F9C5 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				11D48CD826515CF50083F9C5 /* UserInfo_ViewController.swift */,
+				11D48CDD265167B50083F9C5 /* INFO_TableViewCell.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
 		FF0E3BFB262B46540011450A /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
 				FF6D4819262AF3C500394EFE /* Main.storyboard */,
 				FF6D481E262AF3C600394EFE /* LaunchScreen.storyboard */,
+				11D48CD4265158B00083F9C5 /* User.storyboard */,
 				FF6D4815262AF3C500394EFE /* AppDelegate.swift */,
 			);
 			path = StoryBoard;
@@ -163,6 +181,7 @@
 		FF6D4814262AF3C500394EFE /* Attendance_App */ = {
 			isa = PBXGroup;
 			children = (
+				11D48CD726515CC20083F9C5 /* UserInfo */,
 				11CE56DC2633EEE600E528A0 /* API */,
 				FF6D482A262B00E300394EFE /* VIEW */,
 				FFA62EF0262DCEDE00EE300B /* Font */,
@@ -269,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA62EF2262DCF2000EE300B /* Akronim.ttf in Resources */,
+				11D48CD5265158B00083F9C5 /* User.storyboard in Resources */,
 				FF6D4820262AF3C600394EFE /* LaunchScreen.storyboard in Resources */,
 				FF6D481D262AF3C600394EFE /* Assets.xcassets in Resources */,
 				FF6D481B262AF3C500394EFE /* Main.storyboard in Resources */,
@@ -287,6 +307,7 @@
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
 				FF54D49D2646C0D500C47836 /* Class.swift in Sources */,
 				11CE56E82633EF7200E528A0 /* User.swift in Sources */,
+				11D48CDE265167B50083F9C5 /* INFO_TableViewCell.swift in Sources */,
 				FF76B7E826454976003AA6AA /* GetClassInfo.swift in Sources */,
 				FF47FFFC2646F83600AC2833 /* ClassViewController.swift in Sources */,
 				FFEFB6FA264FEABD0033F99D /* TableCellClass.swift in Sources */,
@@ -295,6 +316,7 @@
 				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
 				11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */,
 				FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */,
+				11D48CD926515CF50083F9C5 /* UserInfo_ViewController.swift in Sources */,
 				FF24F307263CF2310034EF59 /* Validation.swift in Sources */,
 				11CE56EF2633EFD900E528A0 /* DataRequest.swift in Sources */,
 				FF1CD9672642B131000FCD5B /* Constants.swift in Sources */,
