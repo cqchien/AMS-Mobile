@@ -15,6 +15,7 @@
 		11D48CD5265158B00083F9C5 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D48CD4265158B00083F9C5 /* User.storyboard */; };
 		11D48CD926515CF50083F9C5 /* UserInfo_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D48CD826515CF50083F9C5 /* UserInfo_ViewController.swift */; };
 		11D48CDE265167B50083F9C5 /* INFO_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D48CDD265167B50083F9C5 /* INFO_TableViewCell.swift */; };
+		11D48CE1265169710083F9C5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11D48CE0265169710083F9C5 /* Roboto-Regular.ttf */; };
 		FF1CD9672642B131000FCD5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1CD9662642B131000FCD5B /* Constants.swift */; };
 		FF24F307263CF2310034EF59 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24F306263CF2310034EF59 /* Validation.swift */; };
 		FF47FFFC2646F83600AC2833 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF47FFFB2646F83600AC2833 /* ClassViewController.swift */; };
@@ -55,6 +56,7 @@
 		11D48CD4265158B00083F9C5 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		11D48CD826515CF50083F9C5 /* UserInfo_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo_ViewController.swift; sourceTree = "<group>"; };
 		11D48CDD265167B50083F9C5 /* INFO_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFO_TableViewCell.swift; sourceTree = "<group>"; };
+		11D48CE0265169710083F9C5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		FF1CD9662642B131000FCD5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF24F306263CF2310034EF59 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		FF47FFFB2646F83600AC2833 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		FFA62EF0262DCEDE00EE300B /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				11D48CE0265169710083F9C5 /* Roboto-Regular.ttf */,
 				FFA62EF1262DCF2000EE300B /* Akronim.ttf */,
 			);
 			path = Font;
@@ -287,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D48CE1265169710083F9C5 /* Roboto-Regular.ttf in Resources */,
 				FFA62EF2262DCF2000EE300B /* Akronim.ttf in Resources */,
 				11D48CD5265158B00083F9C5 /* User.storyboard in Resources */,
 				FF6D4820262AF3C600394EFE /* LaunchScreen.storyboard in Resources */,
