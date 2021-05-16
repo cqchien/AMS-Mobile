@@ -19,7 +19,8 @@ class INFO_TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        lbl_content.textColor = UIColor(red: 12/100, green: 193/100, blue: 162/100, alpha: 1)
+        lbl_content.font = UIFont(name: "Roboto Regular", size: 20)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

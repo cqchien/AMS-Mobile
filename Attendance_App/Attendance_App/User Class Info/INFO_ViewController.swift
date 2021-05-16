@@ -16,7 +16,7 @@ class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     let info = [UserDefaults.standard.string(forKey: "name"), UserDefaults.standard.string(forKey: "studentCode"), UserDefaults.standard.string(forKey: "mainClass"),UserDefaults.standard.string(forKey: "email")]
     
-    let arr_title = ["name", "id", "class", "mail"]
+    let arr_title = ["user", "id", "class", "mail"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,8 @@ class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         myTable.delegate = self
         myTable.dataSource = self
+        self.myTable.rowHeight = 100
+
         
     }
     
@@ -35,10 +37,12 @@ class INFO_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         return 4 // 4 lines of infor: name, student number, class, email
     }
     
+   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let line = myTable.dequeueReusableCell(withIdentifier: "INFO") as! INFO_TableViewCell
-        
-        
+        line.icon.image = UIImage(named: arr_title[indexPath.row])
+        line.lbl_content.text = info[indexPath.row]
         return line
     }
 

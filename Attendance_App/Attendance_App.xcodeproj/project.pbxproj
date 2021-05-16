@@ -34,6 +34,7 @@
 		11CE56E72633EF7200E528A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11CE56EA2633EF9300E528A0 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		11CE56EE2633EFD900E528A0 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		11D48CC02650C1DC0083F9C5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		2FB08F9015726D8C552D081C /* Pods-Attendance_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attendance_App.release.xcconfig"; path = "Target Support Files/Pods-Attendance_App/Pods-Attendance_App.release.xcconfig"; sourceTree = "<group>"; };
 		8F6DE50AD91728B98A695774 /* Pods-Attendance_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attendance_App.debug.xcconfig"; path = "Target Support Files/Pods-Attendance_App/Pods-Attendance_App.debug.xcconfig"; sourceTree = "<group>"; };
 		A7E73C38304648604F329D96 /* Pods_Attendance_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Attendance_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +194,7 @@
 		FFA62EF0262DCEDE00EE300B /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				11D48CC02650C1DC0083F9C5 /* Roboto-Regular.ttf */,
 				FFA62EF1262DCF2000EE300B /* Akronim.ttf */,
 			);
 			path = Font;
