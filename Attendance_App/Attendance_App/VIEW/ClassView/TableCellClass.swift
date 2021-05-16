@@ -21,6 +21,7 @@ class TableCellClass: UITableViewCell {
     
     @IBOutlet weak var Attendance: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,10 +29,12 @@ class TableCellClass: UITableViewCell {
         self.roundView.layer.borderColor = UIColor(red: 0.05, green: 0.46, blue: 0.49, alpha: 1.00).cgColor
     }
 
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
-
+    
+    
 }

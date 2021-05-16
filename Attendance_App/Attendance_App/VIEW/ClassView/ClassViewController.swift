@@ -11,13 +11,9 @@ import UIKit
 class ClassViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var data = [ClassDto]()
-
-    var info = [UserDefaults.standard.string(forKey: "courseCode")]
     
     @IBOutlet weak var TVClass: UITableView!
     
-//    var name = ["Nguyễn Hữu Toàn", "Đặng Quang Hưng", "Cao Quyết Chiến", "Đỗ Hoàng Hiệp"]
-//    var room = ["E4.1", "C101", "C202", "B4.02"]
     var attendance = ["7/7", "7/7", "6/7"]
     
     
@@ -57,7 +53,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         
         cell.courseCode.text = data[indexPath.row].courseCode
-        cell.nameTeacher.text = self.data[indexPath.row].createdAt
+        cell.nameTeacher.text = self.data[indexPath.row].endTime
         cell.room.text = self.data[indexPath.row].room
         cell.Attendance.text = self.attendance[indexPath.row]
         
