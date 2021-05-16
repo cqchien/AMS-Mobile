@@ -23,6 +23,7 @@ class TableCellClass: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         self.roundView.layer.borderWidth = 2
         self.roundView.layer.borderColor = UIColor(red: 0.05, green: 0.46, blue: 0.49, alpha: 1.00).cgColor
     }

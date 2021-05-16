@@ -10,21 +10,30 @@ import UIKit
 
 class ClassViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    var data = [ClassDto]()
+
+    var info = [UserDefaults.standard.string(forKey: "courseCode")]
     
     @IBOutlet weak var TVClass: UITableView!
-    //var courses =  [UserDefaults.standard.string(forKey: "courseCode") ?? ""]
-    var name = ["Nguyễn Hữu Toàn", "Đặng Quang Hưng", "Cao Quyết Chiến", "Đỗ Hoàng Hiệp"]
-    var room = ["E4.1", "C101", "C202", "B4.02"]
-    var attendance = ["7/7", "7/7", "7/7", "7/7"]
+    
+//    var name = ["Nguyễn Hữu Toàn", "Đặng Quang Hưng", "Cao Quyết Chiến", "Đỗ Hoàng Hiệp"]
+//    var room = ["E4.1", "C101", "C202", "B4.02"]
+    var attendance = ["7/7", "7/7", "6/7"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GetClassInfo()
+        GetClassInfo{
+            data in
+            self.data = data
+            DispatchQueue.main.async {
+                self.TVClass.reloadData()
+            }
+        }
         
         TVClass.delegate = self
         TVClass.dataSource = self
-        
+        // Hide table view cell line
         TVClass.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
@@ -32,23 +41,24 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.didReceiveMemoryWarning()
     }
     
+    // Table view
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
         let cell = self.TVClass.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TableCellClass
         
-        
+        // Create radius for view
         let darius = cell.roundView.frame.height/5
         cell.roundView.layer.cornerRadius = darius
 
         
-        //cell.courseCode.text = self.courses[indexPath.row]
-        cell.nameTeacher.text = self.name[indexPath.row]
-        cell.room.text = self.room[indexPath.row]
+        cell.courseCode.text = data[indexPath.row].courseCode
+        cell.nameTeacher.text = self.data[indexPath.row].createdAt
+        cell.room.text = self.data[indexPath.row].room
         cell.Attendance.text = self.attendance[indexPath.row]
         
         return cell;

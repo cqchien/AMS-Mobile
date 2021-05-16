@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 
-func GetClassInfo() {
+func GetClassInfo(comp: @escaping ([ClassDto])->())  {
+    
     //get URL
     let url = URL(string: "http://localhost:3000/class?order=ASC&page=1&take=10")
     
@@ -49,8 +50,11 @@ func GetClassInfo() {
         do {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let result = try decoder.decode(Class.self, from: jsonData)
-            print(result)
+            comp(result.data)
+            
+            UserDefaults.standard.set(result.data[0].courseCode!, forKey: "courseCode")
             //print(response!)
+            
         } catch {
             print(error.localizedDescription)
             debugPrint(error)
