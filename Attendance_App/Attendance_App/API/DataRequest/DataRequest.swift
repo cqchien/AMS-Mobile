@@ -13,5 +13,6 @@ import Foundation
 struct DataRequest: Codable {
     let email: String? // userName
     let password: String? // password
-    let isMobileApp: Bool?
+    let isMobileApp: Bool? // check whether api call is from mobile app
+    
 }
