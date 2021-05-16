@@ -10,5 +10,5 @@ import Foundation
 
 struct constants {
     
-    static let homeViewController = "HomeView"
+    static let classViewController = "ClassView"
 }
