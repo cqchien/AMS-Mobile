@@ -141,13 +141,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Lz4-2T-UU7">
-                                <rect key="frame" x="145" y="84" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Lz4-2T-UU7">
+                                <rect key="frame" x="155" y="74" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DSs-rx-2FG"/>
+                                    <constraint firstAttribute="height" constant="80" id="LiG-DP-BB9"/>
+                                </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-ku-Ltn" userLabel="myTable">
-                                <rect key="frame" x="0.0" y="214" width="390" height="422"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-ku-Ltn" userLabel="myTable">
+                                <rect key="frame" x="0.0" y="183.99999999999997" width="390" height="506.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="INFO" rowHeight="300" id="VaA-Xi-sOS" customClass="INFO_TableViewCell" customModule="Attendance_App" customModuleProvider="target">
@@ -185,15 +187,71 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="b5L-Os-1aM" userLabel="finishedClass">
+                                <rect key="frame" x="40" y="784" width="40" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="CYf-7G-Bi8"/>
+                                    <constraint firstAttribute="height" constant="40" id="J8O-3t-rKo"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Z4C-St-rFA" appends="YES" id="gCl-bt-dSf"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus" translatesAutoresizingMaskIntoConstraints="NO" id="hS3-IQ-D3T" userLabel="logOut">
+                                <rect key="frame" x="175" y="784" width="40" height="40"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Zu3-Aq-QZ0"/>
+                                    <constraint firstAttribute="height" constant="40" id="plo-vu-jLi"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vKw-vc-KOR" appends="YES" id="Cg9-oO-hnN"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user2" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-PR-KaK" userLabel="userInfo">
+                                <rect key="frame" x="310" y="784" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cla-ny-WFE"/>
+                                    <constraint firstAttribute="width" constant="40" id="sgg-Rs-dtS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gIz-2K-TLs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hS3-IQ-D3T" secondAttribute="bottom" constant="20" id="6Yu-uY-2rn"/>
+                            <constraint firstAttribute="bottom" secondItem="b5L-Os-1aM" secondAttribute="bottom" constant="20" id="6zG-CF-8U9"/>
+                            <constraint firstItem="b5L-Os-1aM" firstAttribute="leading" secondItem="gIz-2K-TLs" secondAttribute="leading" constant="40" id="BKa-AE-kKT"/>
+                            <constraint firstItem="Lz4-2T-UU7" firstAttribute="centerX" secondItem="gIz-2K-TLs" secondAttribute="centerX" id="CNc-6r-Ma0"/>
+                            <constraint firstItem="hS3-IQ-D3T" firstAttribute="centerX" secondItem="gIz-2K-TLs" secondAttribute="centerX" id="EDh-Sp-KQw"/>
+                            <constraint firstItem="Lz4-2T-UU7" firstAttribute="top" secondItem="gIz-2K-TLs" secondAttribute="top" constant="30" id="Kyn-vi-GoX"/>
+                            <constraint firstItem="vVG-ku-Ltn" firstAttribute="width" secondItem="1RG-5b-NnM" secondAttribute="width" id="PZi-HT-1iB"/>
+                            <constraint firstItem="vVG-ku-Ltn" firstAttribute="leading" secondItem="gIz-2K-TLs" secondAttribute="leading" id="abb-g0-hRO"/>
+                            <constraint firstItem="vVG-ku-Ltn" firstAttribute="top" secondItem="Lz4-2T-UU7" secondAttribute="bottom" constant="30" id="e4l-cx-o6a"/>
+                            <constraint firstAttribute="bottom" secondItem="Ygr-PR-KaK" secondAttribute="bottom" constant="20" id="jUr-xA-Kd6"/>
+                            <constraint firstItem="vVG-ku-Ltn" firstAttribute="height" secondItem="1RG-5b-NnM" secondAttribute="height" multiplier="0.6" id="kIt-eb-Roa"/>
+                            <constraint firstItem="gIz-2K-TLs" firstAttribute="trailing" secondItem="Ygr-PR-KaK" secondAttribute="trailing" constant="40" id="oD4-FI-tgl"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="Class" destination="b5L-Os-1aM" id="TAd-ac-Ncc"/>
+                        <outlet property="logOut" destination="hS3-IQ-D3T" id="85s-aY-eB0"/>
                         <outlet property="myTable" destination="vVG-ku-Ltn" id="vZg-f1-nlR"/>
+                        <outlet property="userInfo" destination="Ygr-PR-KaK" id="2n0-ia-65N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGE-uj-zrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Z4C-St-rFA" userLabel="openClass">
+                    <connections>
+                        <action selector="openClass:" destination="O21-zB-GbS" id="Pwk-21-KDk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vKw-vc-KOR" userLabel="logOut">
+                    <connections>
+                        <action selector="logOut:" destination="O21-zB-GbS" id="aH8-ZW-bav"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1852.3076923076922" y="131.51658767772511"/>
         </scene>
@@ -217,7 +275,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="menu" width="448" height="512"/>
+        <image name="minus" width="512" height="512"/>
         <image name="user" width="512" height="512"/>
+        <image name="user2" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
