@@ -15,7 +15,8 @@ class INFO_TableViewCell: UITableViewCell {
     @IBOutlet weak var lbl_content: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        lbl_content.font = UIFont(name: "Roboto Regular", size: 20)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
