@@ -199,37 +199,37 @@
                                 <rect key="frame" x="0.0" y="256.00000000000006" width="414" height="565.33333333333348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="myCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="112" id="lBD-zO-Fgf" customClass="TableCellClass" customModule="Attendance_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="112"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="myCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="140" id="lBD-zO-Fgf" customClass="TableCellClass" customModule="Attendance_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lBD-zO-Fgf" id="nmd-Pa-dsw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="111.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="139.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnC-Ht-hky">
                                                     <rect key="frame" x="10" y="10" width="394" height="90"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-cE-m0V">
-                                                            <rect key="frame" x="25" y="10" width="46" height="20"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.091150344829999994" green="1" blue="0.84467603339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <rect key="frame" x="25" y="10.000000000000002" width="69.666666666666671" height="31.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="24"/>
+                                                            <color key="textColor" red="0.1350354647988099" green="1" blue="0.86415711278210394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoC-8O-dca">
-                                                            <rect key="frame" x="25" y="60" width="42" height="20"/>
+                                                            <rect key="frame" x="25" y="54.666666666666679" width="42" height="25.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.16023146629999999" green="1" blue="0.83219418759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lC-mp-gm3">
-                                                            <rect key="frame" x="302" y="10" width="42" height="20"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="315" y="10.000000000000002" width="54" height="27.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="21"/>
                                                             <color key="textColor" red="0.16023146629999999" green="1" blue="0.83219418759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxY-vT-C4z">
-                                                            <rect key="frame" x="302" y="60" width="42" height="20"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="319" y="54.666666666666679" width="50" height="25.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                             <color key="textColor" red="0.16023146629999999" green="1" blue="0.83219418759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -238,7 +238,7 @@
                                                         <constraint firstAttribute="height" constant="90" id="34f-SX-KFD"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="390" id="3Qu-wz-PTP"/>
                                                         <constraint firstItem="8lC-mp-gm3" firstAttribute="top" secondItem="gnC-Ht-hky" secondAttribute="top" constant="10" id="Ayf-iG-2li"/>
-                                                        <constraint firstAttribute="trailing" secondItem="rxY-vT-C4z" secondAttribute="trailing" constant="50" id="CCs-Jl-NNv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rxY-vT-C4z" secondAttribute="trailing" constant="25" id="CCs-Jl-NNv"/>
                                                         <constraint firstItem="aoC-8O-dca" firstAttribute="leading" secondItem="T5Z-cE-m0V" secondAttribute="leading" id="G5c-aS-vGM"/>
                                                         <constraint firstItem="8lC-mp-gm3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T5Z-cE-m0V" secondAttribute="trailing" constant="8" symbolic="YES" id="ITU-Ad-tIt"/>
                                                         <constraint firstItem="T5Z-cE-m0V" firstAttribute="top" secondItem="gnC-Ht-hky" secondAttribute="top" constant="10" id="LOS-JU-0Be"/>
@@ -247,14 +247,14 @@
                                                         <constraint firstItem="aoC-8O-dca" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gnC-Ht-hky" secondAttribute="leading" constant="20" symbolic="YES" id="Ukn-V3-eKp"/>
                                                         <constraint firstItem="aoC-8O-dca" firstAttribute="centerY" secondItem="rxY-vT-C4z" secondAttribute="centerY" id="bRA-rz-fY2"/>
                                                         <constraint firstItem="T5Z-cE-m0V" firstAttribute="leading" secondItem="gnC-Ht-hky" secondAttribute="leading" constant="25" id="khN-ki-sUd"/>
-                                                        <constraint firstAttribute="trailing" secondItem="8lC-mp-gm3" secondAttribute="trailing" constant="50" id="wqn-eF-qrT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8lC-mp-gm3" secondAttribute="trailing" constant="25" id="wqn-eF-qrT"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="gnC-Ht-hky" secondAttribute="trailing" constant="10" id="Jkn-an-LUo"/>
                                                 <constraint firstItem="gnC-Ht-hky" firstAttribute="leading" secondItem="nmd-Pa-dsw" secondAttribute="leading" constant="10" id="VXc-jZ-7CE"/>
-                                                <constraint firstAttribute="bottom" secondItem="gnC-Ht-hky" secondAttribute="bottom" constant="5" id="jxL-pj-2v1"/>
+                                                <constraint firstAttribute="bottom" secondItem="gnC-Ht-hky" secondAttribute="bottom" constant="15" id="jxL-pj-2v1"/>
                                                 <constraint firstItem="gnC-Ht-hky" firstAttribute="top" secondItem="nmd-Pa-dsw" secondAttribute="top" constant="10" id="oLx-ej-pEJ"/>
                                             </constraints>
                                         </tableViewCellContentView>

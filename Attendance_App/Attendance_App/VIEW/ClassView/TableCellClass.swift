@@ -22,11 +22,20 @@ class TableCellClass: UITableViewCell {
     @IBOutlet weak var Attendance: UILabel!
     
     
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.roundView.layer.borderWidth = 2
         self.roundView.layer.borderColor = UIColor(red: 0.05, green: 0.46, blue: 0.49, alpha: 1.00).cgColor
+        //
+        ColorLabel(label: courseCode)
+        ColorLabel(label: nameTeacher)
+        ColorLabel(label: room)
+        ColorLabel(label: Attendance)
+
+        
+
     }
 
     
@@ -34,6 +43,10 @@ class TableCellClass: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         
+    }
+    
+    func ColorLabel(label: UILabel) {
+        label.textColor = UIColor.init(red: 0.05, green: 0.46, blue: 0.49, alpha: 1.00)
     }
     
     
