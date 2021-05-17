@@ -64,5 +64,4 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell;
     }
 
-   
 }

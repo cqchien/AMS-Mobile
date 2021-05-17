@@ -51,6 +51,7 @@ func APIRequest(email: String , password: String)  {
         do{
             let result = try JSONDecoder().decode(DataReceive.self, from: data)
             
+<<<<<<< HEAD:Attendance_App/Attendance_App/API/APIRequest/APIRequest.swift
             // store data on user default
             UserDefaults.standard.set(result.token?.expiresIn, forKey: "token2")
             print(result)
@@ -61,6 +62,34 @@ func APIRequest(email: String , password: String)  {
             print(jsonErr)
         }
         
+=======
+            // if it exists error -> show error -> exit
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+            
+            // guard we have data
+            guard let data = data else {return}
+            
+            // Decode response from web server
+            do{
+                let result = try JSONDecoder().decode(DataReceive.self, from: data)
+                
+                // store data on user default
+                UserDefaults.standard.set(result.token?.expiresIn, forKey: "token2")
+                print(result)
+                print(response)
+                UserDefaults.standard.set(result.token?.accessToken, forKey: "accessToken")
+//                print(UserDefaults.standard.string(forKey: "accessToken") as Any)
+                // show result
+                
+
+            }catch let jsonErr{
+                print(jsonErr)
+           }
+           
+>>>>>>> Feature_API:Attendance_App/Attendance_App/API/POST/APIRequest.swift
     }
     task.resume()
 }

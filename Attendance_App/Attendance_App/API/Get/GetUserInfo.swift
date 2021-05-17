@@ -42,15 +42,7 @@ func GetUserInfo() {
             do {
                 
                 let result = try JSONDecoder().decode(User.self, from: data)
-                UserDefaults.standard.set(result.id!, forKey: "id")
-                UserDefaults.standard.set(result.createdAt!, forKey: "createdAt")
-                UserDefaults.standard.set(result.updatedAt!, forKey: "updatedAt")
-                UserDefaults.standard.set(result.role!, forKey: "role")
-                UserDefaults.standard.set(result.schoolYear!, forKey: "schoolYear")
-                UserDefaults.standard.set(result.email!, forKey: "email")
-                UserDefaults.standard.setValue(result.mainClass!, forKey: "mainClass")
-                UserDefaults.standard.set(result.studentCode!, forKey: "studentCode")
-                UserDefaults.standard.setValue(result.name!, forKey: "name")
+                
                 print(result)
                 //print(response!)
             }

@@ -2,20 +2,24 @@
 //  INFO_TableViewCell.swift
 //  Attendance_App
 //
-//  Created by QUANG HUNG on 16/May/2021.
+//  Created by QUANG HUNG on 07/May/2021.
 //  Copyright © 2021 J.K. All rights reserved.
 //
 
 import UIKit
 
 class INFO_TableViewCell: UITableViewCell {
-
+    
+   
     @IBOutlet weak var icon: UIImageView!
     
     @IBOutlet weak var lbl_content: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        lbl_content.textColor = UIColor(red: 12/100, green: 193/100, blue: 162/100, alpha: 1)
         lbl_content.font = UIFont(name: "Roboto Regular", size: 20)
     }
 
