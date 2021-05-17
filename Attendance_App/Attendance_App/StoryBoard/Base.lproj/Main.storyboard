@@ -240,7 +240,9 @@
                                                         <constraint firstItem="T5Z-cE-m0V" firstAttribute="top" secondItem="gnC-Ht-hky" secondAttribute="top" constant="10" id="LOS-JU-0Be"/>
                                                         <constraint firstAttribute="bottom" secondItem="rxY-vT-C4z" secondAttribute="bottom" constant="10" id="NRN-P2-Ruj"/>
                                                         <constraint firstAttribute="bottom" secondItem="aoC-8O-dca" secondAttribute="bottom" constant="10" id="Nmu-BB-cTG"/>
-                                                        <constraint firstItem="aoC-8O-dca" firstAttribute="leading" secondItem="gnC-Ht-hky" secondAttribute="leading" constant="25" id="Ukn-V3-eKp"/>
+                                                        <constraint firstItem="rxY-vT-C4z" firstAttribute="leading" secondItem="aoC-8O-dca" secondAttribute="trailing" constant="235" id="Tbd-h5-iRU"/>
+                                                        <constraint firstItem="aoC-8O-dca" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gnC-Ht-hky" secondAttribute="leading" symbolic="YES" id="Ukn-V3-eKp"/>
+                                                        <constraint firstItem="8lC-mp-gm3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T5Z-cE-m0V" secondAttribute="trailing" constant="8" symbolic="YES" id="Zgs-O0-Vt8"/>
                                                         <constraint firstItem="T5Z-cE-m0V" firstAttribute="leading" secondItem="gnC-Ht-hky" secondAttribute="leading" constant="25" id="khN-ki-sUd"/>
                                                         <constraint firstItem="8lC-mp-gm3" firstAttribute="top" secondItem="gnC-Ht-hky" secondAttribute="top" constant="10" id="tJl-wE-GMh"/>
                                                     </constraints>
