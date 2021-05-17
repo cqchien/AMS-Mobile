@@ -20,7 +20,7 @@ class Validation {
         }
         
         if email.count != 0 && password.count != 0 {
-            // Call api request
+            // Call ipa request
             APIRequest(email: user.text!, password: pass.text!)
             // Transition to class home
             TransitionHome(storyboard: storyboard, view: view)

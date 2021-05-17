@@ -164,17 +164,13 @@
                                         </constraints>
                                         <state key="normal" title="ImageLogout" image="minus"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-z1-xLi" userLabel="user">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-z1-xLi">
                                         <rect key="frame" x="344" y="11.666666666666629" width="30" height="30"/>
-                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="UGR-ry-gJv"/>
                                             <constraint firstAttribute="width" constant="30" id="UgH-oe-z08"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="user-4"/>
-                                        <connections>
-                                            <segue destination="vYz-6a-f2V" kind="show" id="TVP-ju-VIU"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqR-SJ-cvy">
                                         <rect key="frame" x="40" y="11.666666666666629" width="30" height="30"/>
@@ -294,16 +290,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crv-M7-bog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1897.1014492753625" y="127.23214285714285"/>
-        </scene>
-        <!--UserInfoVC-->
-        <scene sceneID="SQa-tX-vNA">
-            <objects>
-                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="UserInfoVC" id="vYz-6a-f2V" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="hCG-Pr-HNI"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M7s-FR-MYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2571" y="103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8d4-u8-nbK">
