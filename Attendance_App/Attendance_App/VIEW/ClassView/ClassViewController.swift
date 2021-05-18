@@ -12,17 +12,23 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var data = [ClassDto]()
 
+    
     var info = [UserDefaults.standard.string(forKey: "courseCode")]
+    
+    @IBOutlet weak var ViewTitle: Circle!
     
     @IBOutlet weak var TVClass: UITableView!
     
-//    var name = ["Nguyễn Hữu Toàn", "Đặng Quang Hưng", "Cao Quyết Chiến", "Đỗ Hoàng Hiệp"]
-//    var room = ["E4.1", "C101", "C202", "B4.02"]
+
     var attendance = ["7/7", "7/7", "6/7"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Call circle
+        Circle().Drawcur(view: ViewTitle.self)
+        
+        // Call info class
         GetClassInfo{
             data in
             self.data = data
@@ -31,6 +37,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
         
+        self.navigationController?.isNavigationBarHidden = true
         TVClass.delegate = self
         TVClass.dataSource = self
         // Hide table view cell line
@@ -57,7 +64,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         
         cell.courseCode.text = data[indexPath.row].courseCode
-        cell.nameTeacher.text = self.data[indexPath.row].createdAt
+        cell.nameTeacher.text = self.data[indexPath.row].deletedAt
         cell.room.text = self.data[indexPath.row].room
         cell.Attendance.text = self.attendance[indexPath.row]
         

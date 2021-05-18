@@ -40,7 +40,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         login.addLeftImage(textField: UsernameTextField, img: imageUser!)
         let imagePass = UIImage(named: "password")
         login.addLeftImage(textField: PasswordTextField, img: imagePass!)
-        
+        // Hiden password
+        PasswordTextField.isSecureTextEntry = true
         // Keyboard
         self.UsernameTextField.delegate = self
         self.PasswordTextField.delegate = self
