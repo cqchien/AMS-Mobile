@@ -16,8 +16,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var TVClass: UITableView!
     
-//    var name = ["Nguyễn Hữu Toàn", "Đặng Quang Hưng", "Cao Quyết Chiến", "Đỗ Hoàng Hiệp"]
-//    var room = ["E4.1", "C101", "C202", "B4.02"]
+
     var attendance = ["7/7", "7/7", "6/7"]
     
     
