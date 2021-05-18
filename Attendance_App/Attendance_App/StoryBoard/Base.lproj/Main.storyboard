@@ -169,9 +169,8 @@
                                         </constraints>
                                         <state key="normal" title="ImageLogout" image="minus"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-z1-xLi" userLabel="user">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-z1-xLi">
                                         <rect key="frame" x="344" y="11.666666666666629" width="30" height="30"/>
-                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="UGR-ry-gJv"/>
                                             <constraint firstAttribute="width" constant="30" id="UgH-oe-z08"/>
