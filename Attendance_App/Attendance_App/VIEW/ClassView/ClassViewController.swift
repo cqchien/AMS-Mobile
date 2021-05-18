@@ -12,7 +12,10 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var data = [ClassDto]()
 
+    
     var info = [UserDefaults.standard.string(forKey: "courseCode")]
+    
+    @IBOutlet weak var ViewTitle: Circle!
     
     @IBOutlet weak var TVClass: UITableView!
     
@@ -22,6 +25,10 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Call circle
+        Circle().Drawcur(view: ViewTitle.self)
+        
+        // Call info class
         GetClassInfo{
             data in
             self.data = data
@@ -30,6 +37,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
         
+        self.navigationController?.isNavigationBarHidden = true
         TVClass.delegate = self
         TVClass.dataSource = self
         // Hide table view cell line
@@ -56,7 +64,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         
         cell.courseCode.text = data[indexPath.row].courseCode
-        cell.nameTeacher.text = self.data[indexPath.row].createdAt
+        cell.nameTeacher.text = self.data[indexPath.row].deletedAt
         cell.room.text = self.data[indexPath.row].room
         cell.Attendance.text = self.attendance[indexPath.row]
         

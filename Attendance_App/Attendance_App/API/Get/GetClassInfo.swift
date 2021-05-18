@@ -52,7 +52,7 @@ func GetClassInfo(comp: @escaping ([ClassDto])->())  {
             let result = try decoder.decode(Class.self, from: jsonData)
             comp(result.data)
             
-            UserDefaults.standard.set(result.data[0].courseCode!, forKey: "courseCode")
+            
             //print(response!)
             
         } catch {

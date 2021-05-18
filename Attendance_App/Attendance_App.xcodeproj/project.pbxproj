@@ -29,6 +29,7 @@
 		FF76B7E826454976003AA6AA /* GetClassInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76B7E726454976003AA6AA /* GetClassInfo.swift */; };
 		FFA62EF2262DCF2000EE300B /* Akronim.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFA62EF1262DCF2000EE300B /* Akronim.ttf */; };
 		FFD3747726399BE900157812 /* StyleCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3747626399BE900157812 /* StyleCurve.swift */; };
+		FFDA8DDB26534F0400D09AC9 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDA8DDA26534F0400D09AC9 /* Circle.swift */; };
 		FFEFB6FA264FEABD0033F99D /* TableCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEFB6F9264FEABD0033F99D /* TableCellClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		FF76B7E726454976003AA6AA /* GetClassInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClassInfo.swift; sourceTree = "<group>"; };
 		FFA62EF1262DCF2000EE300B /* Akronim.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Akronim.ttf; sourceTree = "<group>"; };
 		FFD3747626399BE900157812 /* StyleCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleCurve.swift; sourceTree = "<group>"; };
+		FFDA8DDA26534F0400D09AC9 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		FFEFB6F9264FEABD0033F99D /* TableCellClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 				FF1CD9662642B131000FCD5B /* Constants.swift */,
 				FF47FFFB2646F83600AC2833 /* ClassViewController.swift */,
 				FFEFB6F9264FEABD0033F99D /* TableCellClass.swift */,
+				FFDA8DDA26534F0400D09AC9 /* Circle.swift */,
 			);
 			path = ClassView;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				FF47FFFC2646F83600AC2833 /* ClassViewController.swift in Sources */,
 				FFEFB6FA264FEABD0033F99D /* TableCellClass.swift in Sources */,
 				FFD3747726399BE900157812 /* StyleCurve.swift in Sources */,
+				FFDA8DDB26534F0400D09AC9 /* Circle.swift in Sources */,
 				FF76B7E6264529E8003AA6AA /* GetUserInfo.swift in Sources */,
 				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
 				11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */,
