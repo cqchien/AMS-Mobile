@@ -7,7 +7,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let cur: styleCurve = styleCurve()
     let login: styleLogin = styleLogin()
     var validation: Validation = Validation()
-
+    var post = POST_API()
     // Outlet login
     @IBOutlet weak var imageHome: UIImageView!
     @IBOutlet weak var UsernameTextField: UITextField!
@@ -15,12 +15,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var TitleLogin: UILabel!
     @IBOutlet weak var SloganLogin: UILabel!
+    
+    // Spinner loading 
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     // Action login
     
     @IBAction func LoginUser(_ sender: Any) {
-         //Check constraints when login
-        validation.validation(user: UsernameTextField, pass: PasswordTextField, storyboard: self.storyboard!, view: self.view)
         
+        // Check user name and password is nil or not
+        if validation.validate(userName: UsernameTextField, password: PasswordTextField) == 1 {
+            spinner.startAnimating()
+            
+            post.APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
+            
+            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
+                
+                self.spinner.stopAnimating()
+                
+                let alert = UIAlertController(title: self.post.title, message: self.post.message, preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: self.handleHttpStatus))
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        else {
+            return
+        }
+    }
+    
+    func handleHttpStatus(action: UIAlertAction) {
+        if post.status <= 300 {
+            validation.TransitionHome(storyboard: self.storyboard!, view: self.view)
+        }
+        else {
+            return
+        }
     }
     
     override func viewDidLoad() {
@@ -47,7 +77,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         keyboard()
         self.hideKeyboardWhenTappedAround()
         
-        
+        // Hide spinner after stopping
+        spinner.hidesWhenStopped = true
         
     }
     
@@ -101,3 +132,5 @@ extension UIViewController {
         }
 
     }
+
+
