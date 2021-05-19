@@ -7,7 +7,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let cur: styleCurve = styleCurve()
     let login: styleLogin = styleLogin()
     var validation: Validation = Validation()
-    var post = POST_API()
+    var post = APIRequest()
     // Outlet login
     @IBOutlet weak var imageHome: UIImageView!
     @IBOutlet weak var UsernameTextField: UITextField!

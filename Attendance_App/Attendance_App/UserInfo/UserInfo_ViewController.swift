@@ -26,7 +26,8 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         // Call api get user info
-        GetUserInfo()
+        var get = GetUserInfo()
+        get.GetUserInfo()
         
         // Use delegate and datasource
         myTable.delegate = self

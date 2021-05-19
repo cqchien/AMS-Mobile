@@ -9,18 +9,10 @@ import Foundation
 import UIKit
 import Security
 
-class POST_API {
-    
-    // Title of alert
-    var title = "Access Succeed"
-    
-    // Message of alert
-    var message = "You Are Logged in successfully"
-    
-    var status = 0
+class APIRequest:API {
     
     // Init of class
-    init () {}
+    override init () {}
     
     // Call api to get user info
     func APIRequest(email: String , password: String)  {
@@ -66,86 +58,8 @@ class POST_API {
                     //update status
                     self.status = httpResponse.statusCode
                     
-                    if httpResponse.statusCode <= 300 {
-                           // do nothing
-                    }
-                    
-                    else if httpResponse.statusCode == 400 {
-                        
-                            // Update title
-                            self.title = "Access denied"
-                        
-                            // Update message
-                            self.message = "Something Went Wrong"
-                        
-                            return
-                    }
-                    
-                    else if httpResponse.statusCode == 401 {
-                        
-                            // Update title
-                            self.title = "Access denied"
-                        
-                            // Update message
-                            self.message = "You don't have permission to access"
-                        
-                            return
-                    }
-                    
-                    else if httpResponse.statusCode == 403 {
-                        
-                            // Update title
-                            self.title = "Access denied"
-                        
-                            // Update message
-                            self.message = "Access is forbidden"
-                        
-                            return
-                    }
-                    
-                    else if httpResponse.statusCode == 404 {
-                        
-                            // Update title
-                            self.title = "Access denied"
-                        
-                            // Update message
-                            self.message = "Something went wrong"
-                        
-                            return
-                    }
-                    
-                    else if httpResponse.statusCode == 401 {
-                        
-                            // Update title
-                            self.title = "Access denied"
-                        
-                            // Update message
-                            self.message = "You don't have permission to access"
-                        
-                            return
-                    }
-                    
-                    else if httpResponse.statusCode >= 406 {
-                    
-                        // Update title
-                        self.title = "Access denied"
-                    
-                        // Update message
-                        self.message = "Oops, something went wrong. Please wait for a few minutes"
-                    
-                        return
-                    }
-                    
-                    else {
-                        
-                        // Update title
-                        self.title = "Access denied"
-                    
-                        // Update message
-                        self.message = "Oops, something went wrong. Please wait for a few minutes"
-                    
-                        return
-                    }
+                    self.checkStatus()
+                   
             }
             
             // Decode response from web server
@@ -167,3 +81,5 @@ class POST_API {
     }
     
 }
+
+
