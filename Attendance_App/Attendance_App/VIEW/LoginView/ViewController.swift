@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginUser(_ sender: Any) {
          //Check constraints when login
         validation.validation(user: UsernameTextField, pass: PasswordTextField, storyboard: self.storyboard!, view: self.view)
+        CheckToken(storyboard: self.storyboard!)
         
     }
     
@@ -78,12 +79,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-//    func ErrorValid()
-//    {
-//        let Myalert = UIAlertController(title: "Error", message: "Email or password incorrect", preferredStyle: .alert)
-//        Myalert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in}))
-//        present(Myalert, animated: true, completion: nil)
-//    }
 
 }
 

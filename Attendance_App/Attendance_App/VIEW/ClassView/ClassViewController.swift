@@ -12,14 +12,19 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var data = [ClassDto]()
 
+    @IBOutlet weak var ViewTitle: Circle!
     
     var info = [UserDefaults.standard.string(forKey: "courseCode")]
     
-    @IBOutlet weak var ViewTitle: Circle!
-    
     @IBOutlet weak var TVClass: UITableView!
     
-
+    @IBAction func LogOut(_ sender: Any) {
+        let homePage = storyboard?.instantiateViewController(withIdentifier: "HomePage") as! ViewController
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = homePage
+        
+    }
+    
     var attendance = ["7/7", "7/7", "6/7"]
     
     

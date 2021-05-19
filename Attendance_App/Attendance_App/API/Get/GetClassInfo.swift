@@ -25,7 +25,7 @@ func GetClassInfo(comp: @escaping ([ClassDto])->())  {
     
     // Get token from user defaults that stored on app before
     let token = UserDefaults.standard.string(forKey: "accessToken")
-    
+
     // Set HTTP Request Header
     request.addValue("application/json", forHTTPHeaderField: "Accept")
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -52,7 +52,7 @@ func GetClassInfo(comp: @escaping ([ClassDto])->())  {
             let result = try decoder.decode(Class.self, from: jsonData)
             comp(result.data)
             
-            
+            print(result)
             //print(response!)
             
         } catch {
