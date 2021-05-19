@@ -46,7 +46,7 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4 // name, student code, main class, email.
     }
-    
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let line = myTable.dequeueReusableCell(withIdentifier: "INFO") as! INFO_TableViewCell
