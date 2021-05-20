@@ -84,6 +84,9 @@
                                     <constraint firstAttribute="height" constant="40" id="udh-EQ-cKU"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6WV-zX-cfH">
+                                <rect key="frame" x="126" y="631" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XNW-Ju-d54"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -92,7 +95,9 @@
                             <constraint firstItem="hJV-B2-a2W" firstAttribute="top" secondItem="NW2-7D-mqx" secondAttribute="bottom" constant="30" id="97c-LG-rPj"/>
                             <constraint firstItem="hJV-B2-a2W" firstAttribute="width" secondItem="gnP-Gi-7Pd" secondAttribute="width" id="AvK-bH-oAr"/>
                             <constraint firstItem="NW2-7D-mqx" firstAttribute="top" secondItem="XNW-Ju-d54" secondAttribute="top" constant="30" id="JMy-BX-iom"/>
+                            <constraint firstItem="6WV-zX-cfH" firstAttribute="centerX" secondItem="XNW-Ju-d54" secondAttribute="centerX" id="OMQ-7D-eMa"/>
                             <constraint firstAttribute="bottomMargin" secondItem="3yJ-xV-gXg" secondAttribute="bottom" constant="20" id="Qe3-uh-nDh"/>
+                            <constraint firstItem="6WV-zX-cfH" firstAttribute="centerY" secondItem="XNW-Ju-d54" secondAttribute="centerY" id="RDx-OZ-hWR"/>
                             <constraint firstItem="hJV-B2-a2W" firstAttribute="leading" secondItem="XNW-Ju-d54" secondAttribute="leading" id="WRc-tH-Pur"/>
                             <constraint firstAttribute="bottomMargin" secondItem="vrq-iY-vKZ" secondAttribute="bottom" constant="20" id="dF1-wa-li6"/>
                             <constraint firstItem="NW2-7D-mqx" firstAttribute="centerX" secondItem="XNW-Ju-d54" secondAttribute="centerX" id="msK-gM-ZzH"/>
@@ -106,6 +111,7 @@
                         <outlet property="finishedClass" destination="3yJ-xV-gXg" id="fpJ-qN-ph7"/>
                         <outlet property="logOut" destination="vrq-iY-vKZ" id="Une-7n-5mn"/>
                         <outlet property="myTable" destination="hJV-B2-a2W" id="C9c-gq-R9v"/>
+                        <outlet property="spinner" destination="6WV-zX-cfH" id="oVS-X3-DB7"/>
                         <outlet property="user" destination="ZOT-nL-pCf" id="fRI-wQ-RjH"/>
                     </connections>
                 </viewController>
