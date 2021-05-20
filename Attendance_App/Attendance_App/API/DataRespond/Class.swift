@@ -25,6 +25,7 @@ struct ClassDto: Codable {
     let room, startTime, endTime: String?
     let qrCode: String?
     let teacher: TeacherDto?
+    let timesCheckin: String?
 }
 
 
@@ -42,7 +43,7 @@ enum TeacherDto: Codable {
             self = .teacherClass(x)
             return
         }
-        throw DecodingError.typeMismatch(TeacherDto.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for TeacherUnion"))
+        throw DecodingError.typeMismatch(TeacherDto.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for TeachTDo"))
     }
 
     func encode(to encoder: Encoder) throws {

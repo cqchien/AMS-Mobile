@@ -21,6 +21,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // Action login
     @IBAction func LoginUser(_ sender: Any) {
+
+         //Check constraints when login
+        validation.validation(user: UsernameTextField, pass: PasswordTextField, storyboard: self.storyboard!, view: self.view)
+        CheckToken(storyboard: self.storyboard!)
         
         // Check user name and password is nil or not
         if validation.validate(userName: UsernameTextField, password: PasswordTextField) == 1 {
