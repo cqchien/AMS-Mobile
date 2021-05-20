@@ -20,8 +20,8 @@ class API {
     init () {}
     
     func checkStatus(){
-        if status <= 300 {
-               // do nothing
+        if status <= 300 && status != 0 {
+               return
         }
         
         else if status == 400 {
@@ -30,7 +30,7 @@ class API {
                 self.title = "Access denied"
             
                 // Update message
-                self.message = "Something Went Wrong"
+                self.message = "Something Went Wrong."
             
                 return
         }
@@ -41,7 +41,7 @@ class API {
                 self.title = "Access denied"
             
                 // Update message
-                self.message = "You don't have permission to access"
+                self.message = "You don't have permission to access."
             
                 return
         }
@@ -52,7 +52,7 @@ class API {
                 self.title = "Access denied"
             
                 // Update message
-                self.message = "Access is forbidden"
+                self.message = "Access is forbidden."
             
                 return
         }
@@ -63,7 +63,7 @@ class API {
                 self.title = "Access denied"
             
                 // Update message
-                self.message = "Something went wrong"
+                self.message = "Incorrect email or password."
             
                 return
         }
@@ -74,18 +74,29 @@ class API {
                 self.title = "Access denied"
             
                 // Update message
-                self.message = "You don't have permission to access"
+                self.message = "You don't have permission to access."
             
                 return
         }
         
-        else if status >= 406 {
+        else if status == 422 {
+            
+                // Update title
+                self.title = "Access denied"
+            
+                // Update message
+                self.message = "Wrong email format, try again."
+            
+                return
+        }
+        
+        else if status >= 406  && status != 422 {
         
             // Update title
             self.title = "Access denied"
         
             // Update message
-            self.message = "Oops, something went wrong. Please wait for a few minutes"
+            self.message = "Oops, something went wrong. Please wait for a few minutes."
         
             return
         }
@@ -96,7 +107,7 @@ class API {
             self.title = "Access denied"
         
             // Update message
-            self.message = "Oops, something went wrong. Please wait for a few minutes"
+            self.message = "Oops, something went wrong. Please wait for a few minutes."
         
             return
         }

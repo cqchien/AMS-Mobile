@@ -11,8 +11,8 @@ import UIKit
 
 class GetUserInfo:API {
     
-    override init(){}
-    
+    override init() {}
+
     func GetUserInfo() {
         
             // get url
@@ -64,8 +64,8 @@ class GetUserInfo:API {
                     UserDefaults.standard.setValue(result.mainClass!, forKey: "mainClass")
                     UserDefaults.standard.set(result.studentCode!, forKey: "studentCode")
                     UserDefaults.standard.setValue(result.name!, forKey: "name")
-                    print(result)
-                    //print(response!)
+//                    print(result)
+                    print(response!)
                 }
                 catch let jsonErr {
                     print(jsonErr)
@@ -76,4 +76,5 @@ class GetUserInfo:API {
         
             task.resume()
     }
+    
 }
