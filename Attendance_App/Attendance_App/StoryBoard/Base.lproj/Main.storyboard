@@ -97,6 +97,9 @@
                                     <action selector="LoginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5R4-bL-tSf"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JmH-kz-APp">
+                                <rect key="frame" x="181" y="337" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,6 +108,7 @@
                             <constraint firstItem="pgn-SR-Eij" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/3.5" id="7us-ac-Mtn"/>
                             <constraint firstItem="86A-FB-N7d" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/1.5" id="CeP-uS-Mir"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pgn-SR-Eij" secondAttribute="trailing" id="F7x-Ww-3F9"/>
+                            <constraint firstItem="JmH-kz-APp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ND7-ZE-kqi"/>
                             <constraint firstItem="dvu-dN-Qt1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WX9-8W-rUW"/>
                             <constraint firstItem="pgn-SR-Eij" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X4i-R2-VKl"/>
                             <constraint firstItem="m4P-QX-ngg" firstAttribute="centerX" secondItem="pgn-SR-Eij" secondAttribute="centerX" id="ZSs-F9-Pg4"/>
@@ -113,6 +117,7 @@
                             <constraint firstItem="86A-FB-N7d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eTL-Fz-dE4"/>
                             <constraint firstItem="86A-FB-N7d" firstAttribute="top" secondItem="dvu-dN-Qt1" secondAttribute="bottom" constant="50" id="g1c-Mg-fDc"/>
                             <constraint firstItem="dvu-dN-Qt1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pgn-SR-Eij" secondAttribute="bottom" constant="60" id="g6J-CM-uH3"/>
+                            <constraint firstItem="JmH-kz-APp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hJA-Tl-gg1"/>
                             <constraint firstItem="dvu-dN-Qt1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" priority="997" id="mRX-zy-YCI"/>
                         </constraints>
                     </view>
@@ -124,11 +129,12 @@
                         <outlet property="TitleLogin" destination="cJ0-qT-8V9" id="nKa-wE-8B1"/>
                         <outlet property="UsernameTextField" destination="Io2-eK-zwA" id="GLE-MJ-A4r"/>
                         <outlet property="imageHome" destination="p1Y-Ak-UGD" id="Qtt-9c-K44"/>
+                        <outlet property="spinner" destination="JmH-kz-APp" id="i7O-v1-Kpl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="132.26600985221674"/>
+            <point key="canvasLocation" x="1069.5652173913045" y="131.91964285714286"/>
         </scene>
         <!--Class View Controller-->
         <scene sceneID="Duu-CI-52W">

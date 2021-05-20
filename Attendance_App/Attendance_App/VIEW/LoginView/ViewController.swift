@@ -7,7 +7,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let cur: styleCurve = styleCurve()
     let login: styleLogin = styleLogin()
     var validation: Validation = Validation()
-
+    var post = APIRequest()
     // Outlet login
     @IBOutlet weak var imageHome: UIImageView!
     @IBOutlet weak var UsernameTextField: UITextField!
@@ -15,12 +15,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var TitleLogin: UILabel!
     @IBOutlet weak var SloganLogin: UILabel!
-    // Action login
     
+    // Spinner loading 
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    // Action login
     @IBAction func LoginUser(_ sender: Any) {
-         //Check constraints when login
-        validation.validation(user: UsernameTextField, pass: PasswordTextField, storyboard: self.storyboard!, view: self.view)
         
+        // Check user name and password is nil or not
+        if validation.validate(userName: UsernameTextField, password: PasswordTextField) == 1 {
+            
+            // Start spinning
+            spinner.startAnimating()
+            
+            // Call api
+            post.APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
+            
+            // Set timer for wating result of calling api
+            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
+                
+                // Stop spinning
+                self.spinner.stopAnimating()
+                
+                // Nofitication
+                let alert = UIAlertController(title: self.post.title, message: self.post.message, preferredStyle: .alert)
+                
+                // Add button for this notification
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: self.handleHttpStatus))
+                
+                // Display nofitication
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        else {
+            return
+        }
+    }
+    
+    
+    // Get http status
+    func handleHttpStatus(action: UIAlertAction) {
+        if post.status <= 300 {
+            validation.TransitionHome(storyboard: self.storyboard!, view: self.view)
+        }
+        else {
+            return
+        }
     }
     
     override func viewDidLoad() {
@@ -48,7 +88,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         keyboard()
         self.hideKeyboardWhenTappedAround()
         
-        
+        // Hide spinner after stopping
+        spinner.hidesWhenStopped = true
         
     }
     
@@ -78,13 +119,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-//    func ErrorValid()
-//    {
-//        let Myalert = UIAlertController(title: "Error", message: "Email or password incorrect", preferredStyle: .alert)
-//        Myalert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in}))
-//        present(Myalert, animated: true, completion: nil)
-//    }
-
 }
 
 
@@ -102,3 +136,5 @@ extension UIViewController {
         }
 
     }
+
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112AA00C2655210D00BC2DC6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AA00B2655210D00BC2DC6 /* API.swift */; };
 		11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56DE2633EF0300E528A0 /* APIRequest.swift */; };
 		11CE56E42633EF5000E528A0 /* DataReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E32633EF5000E528A0 /* DataReceive.swift */; };
 		11CE56E82633EF7200E528A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E72633EF7200E528A0 /* User.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
+		112AA00B2655210D00BC2DC6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		11CE56DE2633EF0300E528A0 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		11CE56E32633EF5000E528A0 /* DataReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReceive.swift; sourceTree = "<group>"; };
 		11CE56E72633EF7200E528A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				11CE56E22633EF3900E528A0 /* DataRespond */,
 				11CE56DD2633EEEC00E528A0 /* APIRequest */,
 				FF76B7E426452941003AA6AA /* Get */,
+				112AA00B2655210D00BC2DC6 /* API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CE56E42633EF5000E528A0 /* DataReceive.swift in Sources */,
+				112AA00C2655210D00BC2DC6 /* API.swift in Sources */,
 				11CE56EB2633EF9300E528A0 /* Token.swift in Sources */,
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
 				FF54D49D2646C0D500C47836 /* Class.swift in Sources */,
