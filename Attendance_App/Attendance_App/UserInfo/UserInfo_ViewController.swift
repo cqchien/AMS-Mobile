@@ -14,21 +14,51 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var finishedClass: UIImageView!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     @IBOutlet weak var logOut: UIImageView!
     
     @IBOutlet weak var user: UIImageView!
     
-    let info = [UserDefaults.standard.string(forKey: "name"), UserDefaults.standard.string(forKey: "studentCode"), UserDefaults.standard.string(forKey: "mainClass"),UserDefaults.standard.string(forKey: "email")]
+    var get = GetUserInfo()
+    
+    var info:[String] = ["No Information","No Information","No Information","No Information"]
     
     let arr_title = ["user-4", "id", "class", "mail"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        spinner.startAnimating()
+        spinner.hidesWhenStopped = true
         // Call api get user info
-        var get = GetUserInfo()
         get.GetUserInfo()
         
+        _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) {  (timer) in
+            
+            self.get.checkStatus()
+            self.spinner.stopAnimating()
+            
+            if (self.get.status <= 300 && self.get.status != 0) {
+                self.info.removeAll()
+                self.info.append(UserDefaults.standard.string(forKey: "name")!)
+                self.info.append(UserDefaults.standard.string(forKey: "studentCode")!)
+                self.info.append(UserDefaults.standard.string(forKey: "mainClass")!)
+                self.info.append(UserDefaults.standard.string(forKey: "email")!)
+                self.myTable.reloadData()
+            }
+            else {
+                
+                let alert = UIAlertController(title: self.get.title, message: self.get.message, preferredStyle: .alert)
+                
+                // Add button for this notification
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                // Display nofitication
+                self.present(alert, animated: true, completion: nil)
+            }
+           }
+       
         // Use delegate and datasource
         myTable.delegate = self
         myTable.dataSource = self
@@ -58,5 +88,5 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
         
         return line
     }
-
+    
 }
