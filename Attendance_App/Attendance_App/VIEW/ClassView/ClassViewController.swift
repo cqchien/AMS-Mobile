@@ -19,17 +19,15 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var TVClass: UITableView!
     
     @IBAction func LogOut(_ sender: Any) {
-        let homePage = storyboard?.instantiateViewController(withIdentifier: "HomePage") as! ViewController
-        let appDelegate = UIApplication.shared.delegate
-        appDelegate?.window??.rootViewController = homePage
         
+        // Call func log out
+        logOut()
     }
-    
-    var attendance = ["7/7", "7/7", "6/7"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Call circle
         Circle().Drawcur(view: ViewTitle.self)
         
@@ -42,9 +40,12 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
         
+        // Hidden navigation bar
         self.navigationController?.isNavigationBarHidden = true
+        
         TVClass.delegate = self
         TVClass.dataSource = self
+        
         // Hide table view cell line
         TVClass.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
@@ -66,12 +67,11 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Create radius for view
         let darius = cell.roundView.frame.height/5
         cell.roundView.layer.cornerRadius = darius
-
         
         cell.courseCode.text = data[indexPath.row].courseCode
-        cell.nameTeacher.text = self.data[indexPath.row].deletedAt
+        cell.nameTeacher.text = self.data[indexPath.row].endTime
         cell.room.text = self.data[indexPath.row].room
-        cell.Attendance.text = self.attendance[indexPath.row]
+        cell.Attendance.text = self.data[indexPath.row].timesCheckin
         
         return cell;
     }

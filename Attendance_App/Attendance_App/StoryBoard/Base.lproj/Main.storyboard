@@ -65,10 +65,10 @@
                                             <constraint firstAttribute="width" constant="100" id="Os2-Jp-Nzw"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ya Su" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-qT-8V9">
-                                        <rect key="frame" x="149.66666666666666" y="183" width="114.99999999999997" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APOLO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-qT-8V9">
+                                        <rect key="frame" x="117.33333333333333" y="178" width="179.33333333333337" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="Bb4-f0-WxH"/>
+                                            <constraint firstAttribute="height" constant="70" id="Bb4-f0-WxH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Akronim-Regular" family="Akronim" pointSize="65"/>
                                         <nil key="highlightedColor"/>
@@ -78,13 +78,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="cJ0-qT-8V9" firstAttribute="centerX" secondItem="pgn-SR-Eij" secondAttribute="centerX" id="Bgl-mh-AST"/>
-                                    <constraint firstItem="cJ0-qT-8V9" firstAttribute="top" secondItem="p1Y-Ak-UGD" secondAttribute="bottom" constant="5" id="HeC-31-XIF"/>
+                                    <constraint firstItem="cJ0-qT-8V9" firstAttribute="top" secondItem="p1Y-Ak-UGD" secondAttribute="bottom" id="HeC-31-XIF"/>
                                     <constraint firstItem="p1Y-Ak-UGD" firstAttribute="centerX" secondItem="pgn-SR-Eij" secondAttribute="centerX" id="U3z-xU-OQg"/>
                                     <constraint firstItem="p1Y-Ak-UGD" firstAttribute="centerY" secondItem="pgn-SR-Eij" secondAttribute="centerY" id="Wk4-mY-dye"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F o r   E d u c a t i o n" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4P-QX-ngg">
-                                <rect key="frame" x="122.33333333333333" y="287" width="169.33333333333337" height="28"/>
+                                <rect key="frame" x="122.33333333333333" y="292" width="169.33333333333337" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="xzn-Fh-rsy"/>
                                 </constraints>
@@ -102,7 +102,7 @@
                                     <action selector="LoginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5R4-bL-tSf"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JmH-kz-APp">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JmH-kz-APp">
                                 <rect key="frame" x="181" y="337" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -153,15 +153,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIEM DANH " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0A-OA-lef">
-                                        <rect key="frame" x="81.333333333333329" y="85.666666666666671" width="251.33333333333337" height="53.000000000000014"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="45"/>
+                                        <rect key="frame" x="105.66666666666667" y="88.666666666666671" width="223.66666666666663" height="47.000000000000014"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="40"/>
                                         <color key="textColor" red="0.26045815659999999" green="1" blue="0.94081424859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="d0A-OA-lef" firstAttribute="centerY" secondItem="waY-wA-PxJ" secondAttribute="centerY" id="Tm2-mr-kre"/>
-                                    <constraint firstItem="d0A-OA-lef" firstAttribute="centerX" secondItem="waY-wA-PxJ" secondAttribute="centerX" id="pEJ-91-8kl"/>
+                                    <constraint firstItem="d0A-OA-lef" firstAttribute="centerX" secondItem="waY-wA-PxJ" secondAttribute="centerX" multiplier="1.05/1" id="pEJ-91-8kl"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brH-1R-Fdf">
@@ -175,7 +175,7 @@
                                         </constraints>
                                         <state key="normal" title="ImageLogout" image="minus"/>
                                         <connections>
-                                            <action selector="LogOut:" destination="SMi-PS-lXV" eventType="touchUpInside" id="chd-Ds-Ze4"/>
+                                            <action selector="LogOut:" destination="SMi-PS-lXV" eventType="touchUpInside" id="Sum-mR-2Vh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-z1-xLi" userLabel="user" customClass="Us">
@@ -187,7 +187,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="user-4"/>
                                         <connections>
-                                            <segue destination="1pP-Fj-n4Z" kind="show" id="CVA-Rw-Ytg"/>
+                                            <segue destination="e2d-tX-lgE" kind="show" id="Cg3-kj-mUW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqR-SJ-cvy">
@@ -311,12 +311,12 @@
             <point key="canvasLocation" x="1897.1014492753625" y="127.23214285714285"/>
         </scene>
         <!--UserInfoVC-->
-        <scene sceneID="mcy-rx-BDc">
+        <scene sceneID="zhs-Ou-6vs">
             <objects>
-                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="UserInfoVC" id="1pP-Fj-n4Z" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tli-UJ-WjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="UserInfoVC" id="e2d-tX-lgE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuZ-rw-MIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="70"/>
+            <point key="canvasLocation" x="2660" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8d4-u8-nbK">

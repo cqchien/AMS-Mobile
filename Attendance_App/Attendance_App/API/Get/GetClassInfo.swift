@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-
+// '@escaping' wait for response ipa
 func GetClassInfo(comp: @escaping ([ClassDto])->())  {
     
     //get URL
@@ -51,10 +51,8 @@ func GetClassInfo(comp: @escaping ([ClassDto])->())  {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let result = try decoder.decode(Class.self, from: jsonData)
             comp(result.data)
-            
-            print(result)
+           
             //print(response!)
-            
         } catch {
             print(error.localizedDescription)
             debugPrint(error)
