@@ -12,20 +12,20 @@
         <!--UserInfoVC-->
         <scene sceneID="vPC-zl-ccP">
             <objects>
-                <viewController storyboardIdentifier="UserInfoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IXK-et-pqI" userLabel="UserInfoVC" customClass="UserInfo_ViewController" customModule="Attendance_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserInfoVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IXK-et-pqI" userLabel="UserInfoVC" customClass="UserInfo_ViewController" customModule="Attendance_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnP-Gi-7Pd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-4" translatesAutoresizingMaskIntoConstraints="NO" id="NW2-7D-mqx">
-                                <rect key="frame" x="167" y="74" width="80" height="80"/>
+                                <rect key="frame" x="167" y="244" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Tnz-zg-EVL"/>
                                     <constraint firstAttribute="height" constant="80" id="Uq4-ZV-con"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hJV-B2-a2W" userLabel="MyTable">
-                                <rect key="frame" x="0.0" y="184" width="414" height="358.5"/>
+                                <rect key="frame" x="0.0" y="354" width="414" height="358.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="INFO" rowHeight="90" id="UTM-lh-UwV" userLabel="INFO" customClass="INFO_TableViewCell" customModule="Attendance_App" customModuleProvider="target">
@@ -84,9 +84,10 @@
                                     <constraint firstAttribute="height" constant="40" id="udh-EQ-cKU"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6WV-zX-cfH">
-                                <rect key="frame" x="126" y="631" width="20" height="20"/>
-                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dO-RQ-F8Z" userLabel="circle">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XNW-Ju-d54"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,24 +95,26 @@
                             <constraint firstItem="3yJ-xV-gXg" firstAttribute="leading" secondItem="gnP-Gi-7Pd" secondAttribute="leadingMargin" constant="20" id="6nZ-Ie-nTm"/>
                             <constraint firstItem="hJV-B2-a2W" firstAttribute="top" secondItem="NW2-7D-mqx" secondAttribute="bottom" constant="30" id="97c-LG-rPj"/>
                             <constraint firstItem="hJV-B2-a2W" firstAttribute="width" secondItem="gnP-Gi-7Pd" secondAttribute="width" id="AvK-bH-oAr"/>
-                            <constraint firstItem="NW2-7D-mqx" firstAttribute="top" secondItem="XNW-Ju-d54" secondAttribute="top" constant="30" id="JMy-BX-iom"/>
-                            <constraint firstItem="6WV-zX-cfH" firstAttribute="centerX" secondItem="XNW-Ju-d54" secondAttribute="centerX" id="OMQ-7D-eMa"/>
+                            <constraint firstItem="4dO-RQ-F8Z" firstAttribute="top" secondItem="gnP-Gi-7Pd" secondAttribute="top" id="IyR-dc-HX4"/>
                             <constraint firstAttribute="bottomMargin" secondItem="3yJ-xV-gXg" secondAttribute="bottom" constant="20" id="Qe3-uh-nDh"/>
-                            <constraint firstItem="6WV-zX-cfH" firstAttribute="centerY" secondItem="XNW-Ju-d54" secondAttribute="centerY" id="RDx-OZ-hWR"/>
                             <constraint firstItem="hJV-B2-a2W" firstAttribute="leading" secondItem="XNW-Ju-d54" secondAttribute="leading" id="WRc-tH-Pur"/>
                             <constraint firstAttribute="bottomMargin" secondItem="vrq-iY-vKZ" secondAttribute="bottom" constant="20" id="dF1-wa-li6"/>
+                            <constraint firstItem="4dO-RQ-F8Z" firstAttribute="height" secondItem="gnP-Gi-7Pd" secondAttribute="height" multiplier="0.25" id="dpd-nB-Vbi"/>
+                            <constraint firstItem="NW2-7D-mqx" firstAttribute="top" secondItem="4dO-RQ-F8Z" secondAttribute="bottom" constant="20" id="eJq-nG-W8M"/>
+                            <constraint firstItem="4dO-RQ-F8Z" firstAttribute="width" secondItem="gnP-Gi-7Pd" secondAttribute="width" id="ibs-as-W0t"/>
                             <constraint firstItem="NW2-7D-mqx" firstAttribute="centerX" secondItem="XNW-Ju-d54" secondAttribute="centerX" id="msK-gM-ZzH"/>
                             <constraint firstItem="hJV-B2-a2W" firstAttribute="height" secondItem="gnP-Gi-7Pd" secondAttribute="height" multiplier="0.4" id="nWh-BC-LmW"/>
+                            <constraint firstItem="4dO-RQ-F8Z" firstAttribute="leading" secondItem="gnP-Gi-7Pd" secondAttribute="leading" id="qcd-dt-8CX"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZOT-nL-pCf" secondAttribute="bottom" constant="20" id="sRf-Gm-ecl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZOT-nL-pCf" secondAttribute="trailing" constant="20" id="tMz-56-bCw"/>
                             <constraint firstItem="vrq-iY-vKZ" firstAttribute="centerX" secondItem="XNW-Ju-d54" secondAttribute="centerX" id="vnM-T6-fEI"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="circle" destination="4dO-RQ-F8Z" id="NkT-4c-3cu"/>
                         <outlet property="finishedClass" destination="3yJ-xV-gXg" id="fpJ-qN-ph7"/>
                         <outlet property="logOut" destination="vrq-iY-vKZ" id="Une-7n-5mn"/>
                         <outlet property="myTable" destination="hJV-B2-a2W" id="C9c-gq-R9v"/>
-                        <outlet property="spinner" destination="6WV-zX-cfH" id="oVS-X3-DB7"/>
                         <outlet property="user" destination="ZOT-nL-pCf" id="fRI-wQ-RjH"/>
                     </connections>
                 </viewController>

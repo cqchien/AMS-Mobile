@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class API {
     var title = "Access Succeed"
@@ -112,4 +113,65 @@ class API {
             return
         }
     }
+}
+
+func checkStatus(status:Int) {
+    
+    var alert_title: String = ""
+    var alert_message: String = ""
+    let queue = DispatchQueue(label: "CheckStatus")
+    queue.async {
+        if (status <= 300 && status != 0) {
+            return
+        }
+        else {
+            // Update title
+            alert_title = "Access denied"
+            if status == 400 {
+                    
+                // Update message
+                alert_message = "Something Went Wrong."
+
+                }
+                
+            else if status == 401 {
+                
+                // Update message
+                alert_message = "You don't have permission to access."
+                
+                }
+            
+            else if status == 403 {
+                
+                // Update message
+                alert_message = "Access is forbidden."
+                
+                }
+            else if status == 404 {
+                
+                // Update message
+                alert_message = "Incorrect email or password."
+                
+                }
+            else {
+                
+                // Update message
+                alert_message = "Something went wrong."
+                
+                }
+            DispatchQueue.main.async {
+                // Nofitication
+                let alert = UIAlertController(title: alert_title, message: alert_message, preferredStyle: .alert)
+                
+                
+                // Add button for this notification
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                // Display nofitication
+                
+            }
+            
+            }
+    }
+    
 }

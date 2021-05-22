@@ -57,8 +57,6 @@ class APIRequest:API {
                     
                     //update status
                     self.status = httpResponse.statusCode
-                    
-                    self.checkStatus()
                    
             }
             
