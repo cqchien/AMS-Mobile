@@ -17,8 +17,12 @@
 		11D48CDE265167B50083F9C5 /* INFO_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D48CDD265167B50083F9C5 /* INFO_TableViewCell.swift */; };
 		11D48CE1265169710083F9C5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11D48CE0265169710083F9C5 /* Roboto-Regular.ttf */; };
 		FF1CD9672642B131000FCD5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1CD9662642B131000FCD5B /* Constants.swift */; };
-		FF204FCD2655098B00384A68 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF204FCC2655098B00384A68 /* User.storyboard */; };
 		FF24F307263CF2310034EF59 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24F306263CF2310034EF59 /* Validation.swift */; };
+		FF474855265B84BB00173D65 /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF474854265B84BB00173D65 /* Logout.swift */; };
+		FF474858265B851600173D65 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF474857265B851600173D65 /* Extension.swift */; };
+		FF47485A265B852000173D65 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF474859265B852000173D65 /* MenuViewController.swift */; };
+		FF47485C265B852D00173D65 /* SideMenuTrasition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF47485B265B852D00173D65 /* SideMenuTrasition.swift */; };
+		FF47485E265B872400173D65 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF47485D265B872400173D65 /* User.storyboard */; };
 		FF47FFFC2646F83600AC2833 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF47FFFB2646F83600AC2833 /* ClassViewController.swift */; };
 		FF54D49D2646C0D500C47836 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54D49C2646C0D500C47836 /* Class.swift */; };
 		FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4815262AF3C500394EFE /* AppDelegate.swift */; };
@@ -59,8 +63,12 @@
 		11D48CDD265167B50083F9C5 /* INFO_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFO_TableViewCell.swift; sourceTree = "<group>"; };
 		11D48CE0265169710083F9C5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		FF1CD9662642B131000FCD5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		FF204FCC2655098B00384A68 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		FF24F306263CF2310034EF59 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		FF474854265B84BB00173D65 /* Logout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
+		FF474857265B851600173D65 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Attendance_App/SideMenu/Extension.swift; sourceTree = SOURCE_ROOT; };
+		FF474859265B852000173D65 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Attendance_App/SideMenu/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
+		FF47485B265B852D00173D65 /* SideMenuTrasition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuTrasition.swift; path = Attendance_App/SideMenu/SideMenuTrasition.swift; sourceTree = SOURCE_ROOT; };
+		FF47485D265B872400173D65 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = User.storyboard; path = ../../../../../../.Trash/User.storyboard; sourceTree = "<group>"; };
 		FF47FFFB2646F83600AC2833 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		FF54D49C2646C0D500C47836 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		FF6D4812262AF3C500394EFE /* Attendance_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,9 +153,20 @@
 				FF6D4819262AF3C500394EFE /* Main.storyboard */,
 				FF6D481E262AF3C600394EFE /* LaunchScreen.storyboard */,
 				FF6D4815262AF3C500394EFE /* AppDelegate.swift */,
-				FF204FCC2655098B00384A68 /* User.storyboard */,
+				FF47485D265B872400173D65 /* User.storyboard */,
 			);
 			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		FF474856265B84F800173D65 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				FF47485B265B852D00173D65 /* SideMenuTrasition.swift */,
+				FF474859265B852000173D65 /* MenuViewController.swift */,
+				FF474857265B851600173D65 /* Extension.swift */,
+			);
+			name = SideMenu;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		FF4D944F263669760007006D /* LoginView */ = {
@@ -193,6 +212,7 @@
 				11CE56DC2633EEE600E528A0 /* API */,
 				FF6D482A262B00E300394EFE /* VIEW */,
 				FFEFB3FF2654AEA2005E93AB /* CheckToken */,
+				FF474856265B84F800173D65 /* SideMenu */,
 				FFA62EF0262DCEDE00EE300B /* Font */,
 				FF0E3BFB262B46540011450A /* StoryBoard */,
 				FF6D481C262AF3C600394EFE /* Assets.xcassets */,
@@ -204,6 +224,7 @@
 		FF6D4827262AF87000394EFE /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				FF474854265B84BB00173D65 /* Logout.swift */,
 				FF6D4828262AF8A800394EFE /* StyleLogin.swift */,
 				FFD3747626399BE900157812 /* StyleCurve.swift */,
 				FF24F306263CF2310034EF59 /* Validation.swift */,
@@ -310,7 +331,7 @@
 				FF6D4820262AF3C600394EFE /* LaunchScreen.storyboard in Resources */,
 				FF6D481D262AF3C600394EFE /* Assets.xcassets in Resources */,
 				FF6D481B262AF3C500394EFE /* Main.storyboard in Resources */,
-				FF204FCD2655098B00384A68 /* User.storyboard in Resources */,
+				FF47485E265B872400173D65 /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,15 +342,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF474858265B851600173D65 /* Extension.swift in Sources */,
 				11CE56E42633EF5000E528A0 /* DataReceive.swift in Sources */,
 				112AA00C2655210D00BC2DC6 /* API.swift in Sources */,
 				11CE56EB2633EF9300E528A0 /* Token.swift in Sources */,
+				FF474855265B84BB00173D65 /* Logout.swift in Sources */,
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
 				FF54D49D2646C0D500C47836 /* Class.swift in Sources */,
+				FF47485A265B852000173D65 /* MenuViewController.swift in Sources */,
 				11CE56E82633EF7200E528A0 /* User.swift in Sources */,
 				11D48CDE265167B50083F9C5 /* INFO_TableViewCell.swift in Sources */,
 				FFEFB4012654AEC1005E93AB /* CheckToken.swift in Sources */,
 				FF76B7E826454976003AA6AA /* GetClassInfo.swift in Sources */,
+				FF47485C265B852D00173D65 /* SideMenuTrasition.swift in Sources */,
 				FF47FFFC2646F83600AC2833 /* ClassViewController.swift in Sources */,
 				FFEFB6FA264FEABD0033F99D /* TableCellClass.swift in Sources */,
 				FFD3747726399BE900157812 /* StyleCurve.swift in Sources */,
