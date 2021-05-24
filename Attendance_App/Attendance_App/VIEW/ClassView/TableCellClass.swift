@@ -28,7 +28,7 @@ class TableCellClass: UITableViewCell {
         self.roundView.layer.borderColor = UIColor(red: 0.05, green: 0.46, blue: 0.49, alpha: 1.00).cgColor
         
         courseCode.textColor = UIColor.init(red: 0.05, green: 0.46, blue: 0.49, alpha: 1.00)
-        courseCode.font = UIFont(name: "Roboto", size: 25.0)
+        courseCode.font = UIFont(name: "Roboto", size: 20.0)
         
         colorLabel(label: nameTeacher)
         colorLabel(label: room)
@@ -44,7 +44,7 @@ class TableCellClass: UITableViewCell {
     
     func colorLabel(label:UILabel){
         label.textColor = UIColor.init(red: 0.05, green: 0.46, blue: 0.49, alpha: 1.00)
-        label.font = UIFont(name: "Roboto", size: 18.0)
+        label.font = UIFont(name: "Roboto", size: 17.0)
         
         // make shadow
         label.layer.shadowColor = UIColor.black.cgColor

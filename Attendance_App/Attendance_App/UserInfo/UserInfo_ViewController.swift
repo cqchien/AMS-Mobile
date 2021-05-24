@@ -122,7 +122,7 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
                     //update status
                     
                     DispatchQueue.main.sync {
-                        showAlert(status: httpResponse.statusCode)
+                        self.showAlert(status: httpResponse.statusCode)
                     }
                    
                 }

@@ -10,22 +10,31 @@ import UIKit
 
 class MenuViewController: UITableViewController {
    
+    @IBOutlet var TBMenuView: UITableView!
+    
     var data = [ClassDto]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        GetClassInfo{
+            data in
+            self.data = data
+            DispatchQueue.main.async {
+                self.TBMenuView.reloadData()
+            }
+        }
+        
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return data.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Hello"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        cell.textLabel?.text = data[indexPath.row].courseCode
         return cell
     }
-    
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
