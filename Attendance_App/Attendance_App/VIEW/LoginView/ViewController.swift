@@ -6,8 +6,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     let cur: styleCurve = styleCurve()
     let login: styleLogin = styleLogin()
+    
+    var status:Int = 0
     var validation: Validation = Validation()
-    var post = APIRequest()
+//    var post = APIRequest()
     // Outlet login
     @IBOutlet weak var imageHome: UIImageView!
     @IBOutlet weak var UsernameTextField: UITextField!
@@ -23,47 +25,157 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginUser(_ sender: Any) {
 
          //Check constraints when login
-        validation.validation(user: UsernameTextField, pass: PasswordTextField, storyboard: self.storyboard!, view: self.view)
-        CheckToken(storyboard: self.storyboard!)
         
-        // Check user name and password is nil or not
-        if validation.validate(userName: UsernameTextField, password: PasswordTextField) == 1 {
-            
-            // Start spinning
+//        CheckToken(storyboard: self.storyboard!)
+        
+        if validation.validate(userName: UsernameTextField, password: PasswordTextField) == 1   {
             spinner.startAnimating()
-            
-            // Call api
-            post.APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
-            
-            // Set timer for wating result of calling api
-            _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
-                
-                // Stop spinning
-                self.spinner.stopAnimating()
-                
-                // Nofitication
-                let alert = UIAlertController(title: self.post.title, message: self.post.message, preferredStyle: .alert)
-                
-                // Add button for this notification
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: self.handleHttpStatus))
-                
-                // Display nofitication
-                self.present(alert, animated: true, completion: nil)
-            }
+            APIRequest(email: UsernameTextField.text!, password: PasswordTextField.text!)
         }
-        else {
-            return
-        }
+        
     }
     
-    
-    // Get http status
-    func handleHttpStatus(action: UIAlertAction) {
-        if post.status <= 300 {
-            validation.TransitionHome(storyboard: self.storyboard!, view: self.view)
+    func APIRequest(email: String , password: String)  {
+        
+        // get url
+        let url = URL(string: "http://localhost:3000/auth/login")
+        
+        // guard url is valid
+        guard let requestUrl = url else { fatalError() }
+        
+        var request = URLRequest(url: requestUrl)
+        
+        // Set http method
+        request.httpMethod = "POST"
+        
+        // Set HTTP Request Header
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // Get data from user
+        let dataSending = DataRequest(email: email, password: password, isMobileApp: true)
+        
+        // Encode - json file
+        let jsonData = try? JSONEncoder().encode(dataSending)
+        
+        // Get http body
+        request.httpBody = jsonData
+        
+        // func call api
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            // if it exists error -> show error -> exit
+            if let error = error {
+                print("Error took place \(error)")
+                DispatchQueue.main.sync {
+                    
+                    let alert = UIAlertController(title: "Error", message: "Cannot log in, try again.", preferredStyle: .alert)
+
+                    // Add button for this notification
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+                    // Display nofitication
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                return
+            }
+            
+            // guard we have data
+            guard let data = data else {return}
+            
+                if let httpResponse = response as? HTTPURLResponse {
+                    
+                    self.status = httpResponse.statusCode
+                    //update status
+                    DispatchQueue.main.async {
+                        
+                        self.spinner.stopAnimating()
+                        if httpResponse.statusCode <= 300 {
+                            self.validation.TransitionHome(storyboard: self.storyboard!, view: self.view)
+                        }
+                        else
+                        {
+                            self.showAlert(status: httpResponse.statusCode)
+                            return
+                        }
+                    }
+                   
+            }
+            
+            // Decode response from web server
+            do{
+                let result = try JSONDecoder().decode(DataReceive.self, from: data)
+                
+                // store data on user default
+                UserDefaults.standard.set(result.token?.expiresIn, forKey: "token2")
+                UserDefaults.standard.set(result.token?.accessToken, forKey: "accessToken")
+                
+        
+            }catch let jsonErr{
+                print(jsonErr)
+            }
+            
         }
-        else {
-            return
+        task.resume()
+    }
+    
+    func showAlert(status: Int){
+        var alert_title = ""
+        var alert_message = ""
+        let queue = DispatchQueue(label: "CheckStatus")
+        queue.async {
+            if (status <= 300 && status != 0) {
+                return
+            }
+            else {
+                // Update title
+                alert_title = "Access denied"
+                if status == 400 {
+                        
+                    // Update message
+                    alert_message = "Something Went Wrong."
+
+                    }
+                    
+                else if status == 401 {
+                    
+                    // Update message
+                    alert_message = "You don't have permission to access."
+                    
+                    }
+                
+                else if status == 403 {
+                    
+                    // Update message
+                    alert_message = "Access is forbidden."
+                    
+                    }
+                else if status == 404 {
+                    
+                    // Update message
+                    alert_message = "Incorrect email or password."
+                    
+                    }
+                else {
+                    
+                    // Update message
+                    alert_message = "Something went wrong."
+                    
+                    }
+                DispatchQueue.main.async {
+                    // Nofitication
+                    let alert = UIAlertController(title: alert_title, message: alert_message, preferredStyle: .alert)
+                    
+                    
+                    // Add button for this notification
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    
+                    // Display nofitication
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                }
         }
     }
     
