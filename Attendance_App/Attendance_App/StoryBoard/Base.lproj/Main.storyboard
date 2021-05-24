@@ -178,7 +178,7 @@
                                             <action selector="LogOut:" destination="SMi-PS-lXV" eventType="touchUpInside" id="Sum-mR-2Vh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-z1-xLi" userLabel="user" customClass="Us">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-z1-xLi" userLabel="user">
                                         <rect key="frame" x="344" y="11.666666666666629" width="30" height="30"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -187,7 +187,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="user-4"/>
                                         <connections>
-                                            <segue destination="e2d-tX-lgE" kind="show" id="Cg3-kj-mUW"/>
+                                            <segue destination="Egb-Qv-btd" kind="show" id="jyb-vP-Nkk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqR-SJ-cvy">
@@ -196,7 +196,10 @@
                                             <constraint firstAttribute="width" constant="30" id="K4j-hM-CqZ"/>
                                             <constraint firstAttribute="height" constant="30" id="seq-do-UH6"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="more"/>
+                                        <state key="normal" title="Button" image="menu"/>
+                                        <connections>
+                                            <action selector="tapMenu:" destination="SMi-PS-lXV" eventType="touchUpInside" id="Xf0-kv-MOZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -223,8 +226,8 @@
                                                     <rect key="frame" x="10" y="10" width="394" height="90"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-cE-m0V">
-                                                            <rect key="frame" x="25" y="10" width="46" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="25.000000000000004" y="10.000000000000002" width="51.333333333333343" height="20.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="17"/>
                                                             <color key="textColor" red="0.091150344829999994" green="1" blue="0.84467603339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -311,12 +314,40 @@
             <point key="canvasLocation" x="1897.1014492753625" y="127.23214285714285"/>
         </scene>
         <!--UserInfoVC-->
-        <scene sceneID="zhs-Ou-6vs">
+        <scene sceneID="at4-ht-LzJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="UserInfoVC" id="e2d-tX-lgE" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iuZ-rw-MIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="UserInfoVC" id="Egb-Qv-btd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QdV-oL-BaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2660" y="112"/>
+            <point key="canvasLocation" x="2673" y="220"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="Dev-9U-hfG">
+            <objects>
+                <tableViewController storyboardIdentifier="menuViewController" id="1AS-0y-SPA" customClass="MenuViewController" customModule="Attendance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3X3-P0-mnz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="myCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JVh-Q6-Yxh">
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JVh-Q6-Yxh" id="gyc-Xh-Jxu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1AS-0y-SPA" id="LHR-wi-lUO"/>
+                            <outlet property="delegate" destination="1AS-0y-SPA" id="Ro7-PN-YwX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ppk-PR-BSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826" y="-277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8d4-u8-nbK">
@@ -337,8 +368,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="menu" width="384" height="384"/>
         <image name="minus" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="more" width="307.20001220703125" height="307.20001220703125"/>
         <image name="user-4" width="384" height="384"/>
     </resources>
 </document>

@@ -10,11 +10,12 @@ import UIKit
 
 class ClassViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    let trasition = SideMenuTrasition()
+    
     var data = [ClassDto]()
 
-    @IBOutlet weak var ViewTitle: Circle!
     
-    var info = [UserDefaults.standard.string(forKey: "courseCode")]
+    @IBOutlet weak var ViewTitle: Circle!
     
     @IBOutlet weak var TVClass: UITableView!
     
@@ -24,6 +25,13 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         logOut()
     }
     
+    @IBAction func tapMenu(_ sender: UIBarButtonItem) {
+        
+        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "menuViewController") else {return}
+        menuViewController.modalPresentationStyle = .overCurrentContext
+        menuViewController.transitioningDelegate = self
+        present(menuViewController, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,21 +63,30 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     // Table view
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // Board link on  
         let cell = self.TVClass.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TableCellClass
         
         // Create radius for view
         let darius = cell.roundView.frame.height/5
         cell.roundView.layer.cornerRadius = darius
         
+        // show data display on table view cell
         cell.courseCode.text = data[indexPath.row].courseCode
-        cell.nameTeacher.text = self.data[indexPath.row].endTime
+                
+                let x = data[indexPath.row].teacher!
+                switch x {
+                case .string(_):
+                    cell.nameTeacher.text = "Not updated yet"
+                case .teacherClass(let B):
+                    cell.nameTeacher.text = B.name!
+                }
+
         cell.room.text = self.data[indexPath.row].room
         cell.Attendance.text = self.data[indexPath.row].timesCheckin
         
