@@ -33,7 +33,7 @@ class TableCellClass: UITableViewCell {
         colorLabel(label: nameTeacher)
         colorLabel(label: room)
         colorLabel(label: Attendance)
-        
+                
         
     }
 
@@ -54,4 +54,12 @@ class TableCellClass: UITableViewCell {
         label.layer.masksToBounds = false
     }
 
+}
+
+
+func TappTransision() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let homePage = storyboard.instantiateViewController(withIdentifier: "QR_Scaner")
+    let appDelegate = UIApplication.shared.delegate
+    appDelegate?.window??.rootViewController = homePage
 }

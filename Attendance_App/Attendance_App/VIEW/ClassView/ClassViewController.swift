@@ -10,8 +10,10 @@ import UIKit
 
 class ClassViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    // Call class SideMenuTrasition()
     let trasition = SideMenuTrasition()
     
+    // Assign data as array
     var data = [ClassDto]()
 
     
@@ -25,13 +27,20 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         logOut()
     }
     
+    // Button show not finish class
     @IBAction func tapMenu(_ sender: UIBarButtonItem) {
         
         guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "menuViewController") else {return}
+        
         menuViewController.modalPresentationStyle = .overCurrentContext
+        
         menuViewController.transitioningDelegate = self
+        
         present(menuViewController, animated: true)
     }
+    
+    
+// MARK:- Handle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,15 +67,27 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         TVClass.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    // Data transfer using Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination  = segue.destination as? QR_ViewController {
+            destination.studentDetails = data[(TVClass.indexPathForSelectedRow?.row)!]
+        }
     }
     
-    // Table view
+    
+//MARK:- UITableView methods
+
+    // Table view count
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
+    // Switch pages when selecting a section
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "QR_Scanner", sender: self)
+    }
+    
+    // show data display on table view cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Board link on  
@@ -76,18 +97,25 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
         let darius = cell.roundView.frame.height/5
         cell.roundView.layer.cornerRadius = darius
         
-        // show data display on table view cell
+        // Remove the cell highlight color
+        cell.selectionStyle = .none
+        
+        // Add feature courseCode
         cell.courseCode.text = data[indexPath.row].courseCode
-                
-                let x = data[indexPath.row].teacher!
-                switch x {
+        
+        // Add feature  teachers name divided into 2 cases
+        let x = data[indexPath.row].teacher!
+            switch x {
                 case .string(_):
-                    cell.nameTeacher.text = "Not updated yet"
+                    cell.nameTeacher.text = "No teacher"
                 case .teacherClass(let B):
                     cell.nameTeacher.text = B.name!
                 }
 
+        // Add feature room
         cell.room.text = self.data[indexPath.row].room
+        
+        // Add feature timeCheckin
         cell.Attendance.text = self.data[indexPath.row].timesCheckin
         
         return cell;

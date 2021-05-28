@@ -11,8 +11,11 @@ import UIKit
 func logOut () {
     
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
     let homePage = storyboard.instantiateViewController(withIdentifier: "HomePage")
+    
     let appDelegate = UIApplication.shared.delegate
+    
     appDelegate?.window??.rootViewController = homePage
     
     // Remove data token

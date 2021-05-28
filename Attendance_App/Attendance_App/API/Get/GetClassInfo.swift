@@ -13,7 +13,7 @@ import UIKit
 func GetClassInfo(comp: @escaping ([ClassDto])->())  {
     
     //get URL
-    let url = URL(string: "http://localhost:3000/class?order=ASC&page=1&take=10")
+    let url = URL(string: "https://ams-be-yasu.herokuapp.com/class")
     
     // guard url is valid
     guard let requestUrl = url else { fatalError() }
@@ -51,7 +51,6 @@ func GetClassInfo(comp: @escaping ([ClassDto])->())  {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let result = try decoder.decode(Class.self, from: jsonData)
             comp(result.data)
-           
             //print(response!)
         } catch {
             print(error.localizedDescription)

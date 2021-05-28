@@ -10,6 +10,7 @@ import UIKit
 
 class MenuViewController: UITableViewController {
    
+
     @IBOutlet var TBMenuView: UITableView!
     
     var data = [ClassDto]()

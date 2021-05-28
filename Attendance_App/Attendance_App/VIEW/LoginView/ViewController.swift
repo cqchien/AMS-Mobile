@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func APIRequest(email: String , password: String)  {
         
         // get url
-        let url = URL(string: "http://localhost:3000/auth/login")
+        let url = URL(string: "https://ams-be-yasu.herokuapp.com/auth/login")
         
         // guard url is valid
         guard let requestUrl = url else { fatalError() }

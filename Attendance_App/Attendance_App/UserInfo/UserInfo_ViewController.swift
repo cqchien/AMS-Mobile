@@ -76,7 +76,7 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
     func loadUSerInfo() {
         
             // get url
-        guard let URL = URL(string: "http://localhost:3000/auth/me") else {
+        guard let URL = URL(string: "https://ams-be-yasu.herokuapp.com/auth/me") else {
             fatalError()
         }
         
