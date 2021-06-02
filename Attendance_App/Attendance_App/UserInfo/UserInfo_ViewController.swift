@@ -31,13 +31,18 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // Array stores name of image in assets
     let arr_title = ["user-4", "id", "class", "mail"]
+    
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Circle().Drawcur(view: circle)
         // Before calling -> no data receive
         info = []
-        
+        spinner.startAnimating()
+        spinner.hidesWhenStopped = true
         // Call api
         self.loadUSerInfo()
         
@@ -98,7 +103,7 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
                 if let error = error {
                     
                     print("Error took place \(error)")
-                    
+                    self.spinner.stopAnimating()
                     // Show Alert if error 
                     DispatchQueue.main.sync {
                         
@@ -122,6 +127,7 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
                     //update status
                     
                     DispatchQueue.main.sync {
+                        self.spinner.stopAnimating()
                         self.showAlert(status: httpResponse.statusCode)
                     }
                    
@@ -133,6 +139,7 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.info = [result.name!, String(result.studentCode!), result.mainClass!, result.email!]
                     
                     DispatchQueue.main.async {
+                        self.spinner.stopAnimating()
                         self.myTable.reloadData()
                     }
                     
