@@ -10,6 +10,9 @@ import UIKit
 
 class ClassViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+   
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     // Call class SideMenuTrasition()
     let trasition = SideMenuTrasition()
     
@@ -45,6 +48,14 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let w = self.view.frame.size.width
+        let h = self.view.frame.size.height
+
+        spinner.frame.origin = CGPoint(x: w/2 - spinner.frame.size.width/2, y: h/2 - spinner.frame.size.height/2)
+
+        spinner.startAnimating()
+        
+        spinner.hidesWhenStopped = true
         // Call circle
         Circle().Drawcur(view: ViewTitle.self)
         
@@ -53,6 +64,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
             data in
             self.data = data
             DispatchQueue.main.async {
+                self.spinner.stopAnimating()
                 self.TVClass.reloadData()
             }
         }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IXK-et-pqI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IXK-et-pqI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="INFO" rowHeight="90" id="UTM-lh-UwV" userLabel="INFO" customClass="INFO_TableViewCell" customModule="Attendance_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UTM-lh-UwV" id="ZdI-KI-mgR">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
@@ -88,6 +88,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="Xkq-nt-CTl">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XNW-Ju-d54"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -111,10 +115,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Spinner" destination="Xkq-nt-CTl" id="9YZ-B2-sky"/>
                         <outlet property="circle" destination="4dO-RQ-F8Z" id="NkT-4c-3cu"/>
                         <outlet property="finishedClass" destination="3yJ-xV-gXg" id="fpJ-qN-ph7"/>
                         <outlet property="logOut" destination="vrq-iY-vKZ" id="Une-7n-5mn"/>
                         <outlet property="myTable" destination="hJV-B2-a2W" id="C9c-gq-R9v"/>
+                        <outlet property="spinner" destination="Xkq-nt-CTl" id="eiq-ed-R8z"/>
                         <outlet property="user" destination="ZOT-nL-pCf" id="fRI-wQ-RjH"/>
                     </connections>
                 </viewController>
