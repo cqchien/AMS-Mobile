@@ -82,7 +82,7 @@ class ClassViewController: UIViewController, UITableViewDataSource, UITableViewD
     // Data transfer using Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination  = segue.destination as? QR_ViewController {
-            destination.studentDetails = data[(TVClass.indexPathForSelectedRow?.row)!]
+            destination.ClassDetails = data[(TVClass.indexPathForSelectedRow?.row)!]
         }
     }
     

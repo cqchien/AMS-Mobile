@@ -12,12 +12,6 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var myTable: UITableView!
     
-    @IBOutlet weak var finishedClass: UIImageView!
-        
-    @IBOutlet weak var logOut: UIImageView!
-    
-    @IBOutlet weak var user: UIImageView!
-    
     @IBOutlet weak var circle: UIView!
     
     // Array Info stores data received
@@ -37,6 +31,11 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let w = self.view.frame.size.width
+        let h = self.view.frame.size.height
+
+        spinner.frame.origin = CGPoint(x: w/2 - spinner.frame.size.width/2, y: h/2 - spinner.frame.size.height/2)
         
         Circle().Drawcur(view: circle)
         // Before calling -> no data receive
@@ -152,6 +151,15 @@ class UserInfo_ViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         
             task.resume()
+    }
+    
+    
+    @IBAction func backToClassVC(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let homePage = storyboard.instantiateViewController(withIdentifier:  constants.classViewController)
+                let appDelegate = UIApplication.shared.delegate
+                appDelegate?.window??.rootViewController = homePage
+               
     }
     
     func showAlert(status: Int){

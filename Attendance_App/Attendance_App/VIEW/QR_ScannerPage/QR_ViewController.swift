@@ -13,22 +13,16 @@ class QR_ViewController: UIViewController {
     
     var avCaptureSession: AVCaptureSession!
     var avPreviewLayer: AVCaptureVideoPreviewLayer!
-    
-    var studentDetails: ClassDto?
+    var data = [ClassDto]()
+    var reloadDataClass = ClassViewController()
+    var ClassDetails: ClassDto?
     
     var qrcode = ""
-    @IBOutlet weak var sourceCode: UILabel!
-    @IBOutlet weak var studentID: UILabel!
 
     var status = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        sourceCode.text = studentDetails?.courseCode
-        studentID.text = studentDetails?.id
-        
-        
+        self.view.backgroundColor = .black
         avCaptureSession = AVCaptureSession()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
@@ -74,7 +68,29 @@ class QR_ViewController: UIViewController {
     }
     
     @IBAction func backToClassVC(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+                let homePage = storyboard.instantiateViewController(withIdentifier:  constants.classViewController)
+
+                let appDelegate = UIApplication.shared.delegate
+
+                appDelegate?.window??.rootViewController = homePage
+
+                GetClassInfo{
+
+                    data in
+
+                    self.data = data
+
+                    DispatchQueue.main.async {
+
+                        self.reloadDataClass.TVClass?.reloadData()
+
+                        
+
+                    }
+
+                }
     }
     
     func failed() {
@@ -120,9 +136,10 @@ class QR_ViewController: UIViewController {
         
         let token = UserDefaults.standard.string(forKey: "accessToken")
         
-
-        let sData = dataSending(classId: "1a21d49b-7010-415d-aec6-664c16d01e6e", studentId: "bb444846-38dd-4e4a-bd84-bd893689ed69", qrcode: qrcode)
+        let stdID = UserDefaults.standard.string(forKey: "stdID")
+        let sData = dataSending(classId: (ClassDetails?.id)!, studentId: stdID!, qrcode: qrcode)
         
+        avCaptureSession.stopRunning()
         // Encode - json file
         let jsonData = try? JSONEncoder().encode(sData)
         
@@ -152,7 +169,9 @@ class QR_ViewController: UIViewController {
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
                     // Display nofitication
-                    self.present(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: { [self] in
+                        avCaptureSession.startRunning()
+                    })
                     
                 }
                 
@@ -169,8 +188,29 @@ class QR_ViewController: UIViewController {
                         
                         if httpResponse.statusCode <= 300 {
                             
-                            self.dismiss(animated: true, completion: nil)
-                            
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+                                    let homePage = storyboard.instantiateViewController(withIdentifier:  constants.classViewController)
+
+                                    let appDelegate = UIApplication.shared.delegate
+
+                                    appDelegate?.window??.rootViewController = homePage
+
+                                    GetClassInfo{
+
+                                        data in
+
+                                        self.data = data
+
+                                        DispatchQueue.main.async {
+
+                                            self.reloadDataClass.TVClass?.reloadData()
+
+                                            
+
+                                        }
+
+                                    }
                         }
                         else
                         {
@@ -180,7 +220,9 @@ class QR_ViewController: UIViewController {
                             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
                             // Display nofitication
-                            self.present(alert, animated: true, completion: nil)
+                            self.present(alert, animated: true, completion: {
+                                self.avCaptureSession.startRunning()
+                            })
                             
                             return
                         }
@@ -196,7 +238,6 @@ class QR_ViewController: UIViewController {
 }
 extension QR_ViewController : AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-//        avCaptureSession.stopRunning()
         
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
@@ -205,7 +246,7 @@ extension QR_ViewController : AVCaptureMetadataOutputObjectsDelegate {
             found(code: stringValue)
         }
         
-//        dismiss(animated: true)
+
     }
     
     func found(code: String) {

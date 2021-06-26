@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		112AA00C2655210D00BC2DC6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AA00B2655210D00BC2DC6 /* API.swift */; };
-		11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56DE2633EF0300E528A0 /* APIRequest.swift */; };
 		11CE56E42633EF5000E528A0 /* DataReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E32633EF5000E528A0 /* DataReceive.swift */; };
 		11CE56E82633EF7200E528A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56E72633EF7200E528A0 /* User.swift */; };
 		11CE56EB2633EF9300E528A0 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE56EA2633EF9300E528A0 /* Token.swift */; };
@@ -32,7 +30,6 @@
 		FF6D481D262AF3C600394EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF6D481C262AF3C600394EFE /* Assets.xcassets */; };
 		FF6D4820262AF3C600394EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6D481E262AF3C600394EFE /* LaunchScreen.storyboard */; };
 		FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D4828262AF8A800394EFE /* StyleLogin.swift */; };
-		FF76B7E6264529E8003AA6AA /* GetUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76B7E5264529E8003AA6AA /* GetUserInfo.swift */; };
 		FF76B7E826454976003AA6AA /* GetClassInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76B7E726454976003AA6AA /* GetClassInfo.swift */; };
 		FFA62EF2262DCF2000EE300B /* Akronim.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFA62EF1262DCF2000EE300B /* Akronim.ttf */; };
 		FFD3747726399BE900157812 /* StyleCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3747626399BE900157812 /* StyleCurve.swift */; };
@@ -57,8 +54,6 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
-		112AA00B2655210D00BC2DC6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		11CE56DE2633EF0300E528A0 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		11CE56E32633EF5000E528A0 /* DataReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReceive.swift; sourceTree = "<group>"; };
 		11CE56E72633EF7200E528A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11CE56EA2633EF9300E528A0 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -84,7 +79,6 @@
 		FF6D481F262AF3C600394EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF6D4821262AF3C600394EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF6D4828262AF8A800394EFE /* StyleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleLogin.swift; sourceTree = "<group>"; };
-		FF76B7E5264529E8003AA6AA /* GetUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfo.swift; sourceTree = "<group>"; };
 		FF76B7E726454976003AA6AA /* GetClassInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClassInfo.swift; sourceTree = "<group>"; };
 		FFA62EF1262DCF2000EE300B /* Akronim.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Akronim.ttf; sourceTree = "<group>"; };
 		FFD3747626399BE900157812 /* StyleCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleCurve.swift; sourceTree = "<group>"; };
@@ -110,19 +104,9 @@
 			children = (
 				11CE56ED2633EFC300E528A0 /* DataRequest */,
 				11CE56E22633EF3900E528A0 /* DataRespond */,
-				11CE56DD2633EEEC00E528A0 /* APIRequest */,
 				FF76B7E426452941003AA6AA /* Get */,
-				112AA00B2655210D00BC2DC6 /* API.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		11CE56DD2633EEEC00E528A0 /* APIRequest */ = {
-			isa = PBXGroup;
-			children = (
-				11CE56DE2633EF0300E528A0 /* APIRequest.swift */,
-			);
-			path = APIRequest;
 			sourceTree = "<group>";
 		};
 		11CE56E22633EF3900E528A0 /* DataRespond */ = {
@@ -213,9 +197,6 @@
 		FF6D4814262AF3C500394EFE /* Attendance_App */ = {
 			isa = PBXGroup;
 			children = (
-				FFDC6A952660978C0085542A /* QR_ScannerPage */,
-				FF67C2CB265BA53800243F44 /* SideMenuTrasition */,
-				11D48CD726515CC20083F9C5 /* UserInfo */,
 				11CE56DC2633EEE600E528A0 /* API */,
 				FF6D482A262B00E300394EFE /* VIEW */,
 				FFEFB3FF2654AEA2005E93AB /* CheckToken */,
@@ -241,6 +222,9 @@
 		FF6D482A262B00E300394EFE /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				11D48CD726515CC20083F9C5 /* UserInfo */,
+				FF67C2CB265BA53800243F44 /* SideMenuTrasition */,
+				FFDC6A952660978C0085542A /* QR_ScannerPage */,
 				FF4D944F263669760007006D /* LoginView */,
 				FF4D945226366A5B0007006D /* ClassView */,
 			);
@@ -251,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				FF76B7E726454976003AA6AA /* GetClassInfo.swift */,
-				FF76B7E5264529E8003AA6AA /* GetUserInfo.swift */,
 			);
 			path = Get;
 			sourceTree = "<group>";
@@ -358,7 +341,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CE56E42633EF5000E528A0 /* DataReceive.swift in Sources */,
-				112AA00C2655210D00BC2DC6 /* API.swift in Sources */,
 				11CE56EB2633EF9300E528A0 /* Token.swift in Sources */,
 				FF474855265B84BB00173D65 /* Logout.swift in Sources */,
 				FF6D4818262AF3C500394EFE /* ViewController.swift in Sources */,
@@ -372,12 +354,10 @@
 				FFEFB6FA264FEABD0033F99D /* TableCellClass.swift in Sources */,
 				FFD3747726399BE900157812 /* StyleCurve.swift in Sources */,
 				FFEFB3FA2654A650005E93AB /* Circle.swift in Sources */,
-				FF76B7E6264529E8003AA6AA /* GetUserInfo.swift in Sources */,
 				FF67C2D0265BA53800243F44 /* Extension.swift in Sources */,
 				FF67C2D1265BA53800243F44 /* MenuViewController.swift in Sources */,
 				FF67C2CF265BA53800243F44 /* SideMenuTrasition.swift in Sources */,
 				FF6D4829262AF8A800394EFE /* StyleLogin.swift in Sources */,
-				11CE56DF2633EF0300E528A0 /* APIRequest.swift in Sources */,
 				FF6D4816262AF3C500394EFE /* AppDelegate.swift in Sources */,
 				11D48CD926515CF50083F9C5 /* UserInfo_ViewController.swift in Sources */,
 				FF24F307263CF2310034EF59 /* Validation.swift in Sources */,

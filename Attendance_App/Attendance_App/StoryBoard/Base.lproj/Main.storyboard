@@ -334,51 +334,13 @@
                     <view key="view" contentMode="scaleToFill" id="f33-0O-xe3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpA-MZ-CZA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="59.666666666666657"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-o5-KBD">
-                                        <rect key="frame" x="12" y="34.666666666666671" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrL-Mv-AVw">
-                                        <rect key="frame" x="10" y="5.6666666666666643" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="eCZ-o5-KBD" firstAttribute="top" secondItem="TrL-Mv-AVw" secondAttribute="bottom" constant="8" id="3tw-9I-eVa"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TrL-Mv-AVw" secondAttribute="trailing" constant="20" symbolic="YES" id="RKE-xm-nn8"/>
-                                    <constraint firstAttribute="bottom" secondItem="eCZ-o5-KBD" secondAttribute="bottom" constant="4" id="geW-Ww-Gzq"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eCZ-o5-KBD" secondAttribute="trailing" constant="20" symbolic="YES" id="hqR-Kn-ago"/>
-                                    <constraint firstItem="TrL-Mv-AVw" firstAttribute="leading" secondItem="EpA-MZ-CZA" secondAttribute="leading" constant="10" id="jH8-CT-mxx"/>
-                                    <constraint firstItem="eCZ-o5-KBD" firstAttribute="leading" secondItem="TrL-Mv-AVw" secondAttribute="leading" constant="2" id="wZF-d4-pKs"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Min-N3-aCn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="EpA-MZ-CZA" firstAttribute="leading" secondItem="Min-N3-aCn" secondAttribute="leading" id="U9c-e4-Unl"/>
-                            <constraint firstItem="EpA-MZ-CZA" firstAttribute="top" secondItem="Min-N3-aCn" secondAttribute="top" id="UYR-f6-Fvn"/>
-                            <constraint firstItem="Min-N3-aCn" firstAttribute="trailing" secondItem="EpA-MZ-CZA" secondAttribute="trailing" id="Vuh-0M-o0T"/>
-                            <constraint firstItem="EpA-MZ-CZA" firstAttribute="height" secondItem="f33-0O-xe3" secondAttribute="height" multiplier="1/15" id="qLb-uT-sei"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Vdy-Nn-Km2" appends="YES" id="OSi-pl-TvP"/>
                         </connections>
                     </view>
-                    <connections>
-                        <outlet property="sourceCode" destination="TrL-Mv-AVw" id="Euz-Pf-hjo"/>
-                        <outlet property="studentID" destination="eCZ-o5-KBD" id="gTb-B7-43u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFj-mZ-Odp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="down" id="Vdy-Nn-Km2">

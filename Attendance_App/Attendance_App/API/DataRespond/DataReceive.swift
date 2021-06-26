@@ -8,5 +8,7 @@
 
 import Foundation
 struct DataReceive: Codable {
+    let user: User?
+    let role:String?
     let token: Token?
 }

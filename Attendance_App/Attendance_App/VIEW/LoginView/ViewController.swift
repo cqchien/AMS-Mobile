@@ -110,7 +110,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 // store data on user default
                 UserDefaults.standard.set(result.token?.expiresIn, forKey: "token2")
                 UserDefaults.standard.set(result.token?.accessToken, forKey: "accessToken")
-                
+                UserDefaults.standard.set(result.user?.id, forKey: "stdID")
         
             }catch let jsonErr{
                 print(jsonErr)
